@@ -1,0 +1,7 @@
+upload_to_hf.py
+.serena
+__pycache__
+.env.*
+.env
+*.local.*
+.claude
