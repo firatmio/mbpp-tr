@@ -105,6 +105,14 @@ class ReviewStore:
             if (current["updated_at"] if current else None) != expected_updated_at:
                 raise DecisionConflict(task_id)
 
+            # Zaten onaylı bir satır metni ve notu değiştirilmeden tekrar onaylanırsa hiçbir şey yazılmaz.
+            # Aksi halde Ctrl+Enter ile hızla geçilen satırlar "insan inceledi" diye yeniden etiketlenir
+            # ve kimin incelediği / çevirinin nereden alındığı bilgisi kaybolurdu.
+            if (status == "approved" and current and current["status"] == "approved"
+                    and final_tr.strip() == current["final_tr"]
+                    and note.strip() == (current.get("note") or "")):
+                return current
+
             if status == "pending":
                 self.decisions.pop(task_id, None)
                 decision = None
@@ -120,6 +128,9 @@ class ReviewStore:
                     "reviewer": "human",
                     "updated_at": datetime.now(timezone.utc).isoformat(timespec="milliseconds"),
                 }
+                # Metin değişmediyse, çevirinin başka bir dosyadaki onaylı çeviriden alındığı bilgisi korunur
+                if current and current.get("reused_from") and decision["final_tr"] == current["final_tr"]:
+                    decision["reused_from"] = current["reused_from"]
                 self.decisions[task_id] = decision
             # Önce geçici dosyaya yaz, sonra değiştir: yazma yarıda kesilirse eski kararlar bozulmaz
             tmp = self.decisions_path.with_suffix(".tmp")

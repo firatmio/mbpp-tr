@@ -108,6 +108,8 @@ Tarayıcıda bir onay arayüzü açılır:
   sorunlular, onaylılar, Claude'un onayladıkları.
 - Kararlar her işlemde `<dosya>.decisions.json` dosyasına yazılır; araç kapatılıp açılınca kaldığı yerden devam eder.
   Her kararda kimin incelediği (`reviewer`: `human`, `claude`, `human+claude`) saklanır.
+  Zaten onaylı bir satırı metnini ve notunu değiştirmeden tekrar onaylamak hiçbir şey kaydetmez;
+  böylece hızla geçilen satırlar "insan inceledi" olarak yeniden etiketlenmez.
 
 **Aynı ağdaki başka bir bilgisayardan:** `--host 0.0.0.0` ekleyin. Araç, gizli bir token içeren adresi
 terminale yazar; token olmadan erişim reddedilir. Windows güvenlik duvarında yalnızca **Özel ağ** için

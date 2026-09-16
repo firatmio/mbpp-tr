@@ -328,11 +328,16 @@ async function decide(status) {
   }
   if (!res.ok) { toast("Kaydedilemedi: " + (await res.text())); return; }
 
+  const previous = state.decisions[item.task_id];
   const { decision } = await res.json();
   if (decision) state.decisions[item.task_id] = decision; else delete state.decisions[item.task_id];
   delete state.edits[item.task_id];
   delete state.notes[item.task_id];
-  toast({ approved: "Onaylandı", problem: "Sorunlu olarak işaretlendi", pending: "Karar geri alındı" }[status]);
+  // Sunucu değişmeyen bir onayı kaydetmez; aynı kaydı geri döndürür
+  const unchanged = status === "approved" && previous && decision && previous.updated_at === decision.updated_at;
+  toast(unchanged
+    ? "Zaten onaylı, değişiklik yok"
+    : { approved: "Onaylandı", problem: "Sorunlu olarak işaretlendi", pending: "Karar geri alındı" }[status]);
 
   // Filtreden düşen satır listeden çıkar; aynı index bir sonraki satırı gösterir
   const wasIndex = state.index;
