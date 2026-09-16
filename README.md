@@ -8,8 +8,15 @@ veri setinin Türkçe çevirisi ve bu çeviriyi üretmek, incelemek ve doğrulam
 
 | Config | Satır | Durum |
 |---|---|---|
-| `sanitized` | 427 | Yayımlandı (`data/final/`) |
-| `full` | 974 | Hazırlanıyor (`data/full/`) |
+| `sanitized` | 427 | Yayımlandı (`data/final/sanitized/`) |
+| `full` | 974 | Yayımlandı (`data/final/full/`) |
+
+```python
+from datasets import load_dataset
+
+sanitized = load_dataset("firatmio/mbpp-tr")          # varsayılan
+full = load_dataset("firatmio/mbpp-tr", "full")
+```
 
 ## Süreç
 
@@ -23,7 +30,7 @@ data/.../mbpp_tr_<split>.jsonl                  taslaklar
 data/.../mbpp_tr_<split>.jsonl.decisions.json   kararlar
    │  review_tool.py --export-dir
    ▼
-data/final/mbpp_tr_<split>.jsonl                yalnızca onaylı satırlar
+data/final/<config>/mbpp_tr_<split>.jsonl       yalnızca onaylı satırlar
    │  validate_final.py   orijinalle karşılaştırma + testleri çalıştırma
    ▼
 Hugging Face
@@ -112,7 +119,11 @@ izin verin. Aynı satır iki yerden değiştirilirse ikinci kayıt reddedilir ve
 ## 3. Dışa aktarma
 
 ```bash
-python review_tool.py data/mbpp_tr_test.jsonl data/mbpp_tr_train.jsonl data/mbpp_tr_validation.jsonl data/mbpp_tr_prompt.jsonl --export-dir data/final
+# sanitized
+python review_tool.py data/mbpp_tr_test.jsonl data/mbpp_tr_train.jsonl data/mbpp_tr_validation.jsonl data/mbpp_tr_prompt.jsonl --export-dir data/final/sanitized
+
+# full
+python review_tool.py data/full/mbpp_tr_test.jsonl data/full/mbpp_tr_train.jsonl data/full/mbpp_tr_validation.jsonl data/full/mbpp_tr_prompt.jsonl --export-dir data/final/full
 ```
 
 Yalnızca onaylanmış satırlar, onaylanan Türkçe metinle yazılır. Onaylanmamış satır kalırsa uyarı verilir.
@@ -120,8 +131,8 @@ Yalnızca onaylanmış satırlar, onaylanan Türkçe metinle yazılır. Onaylanm
 ## 4. Doğrulama
 
 ```bash
-python validate_final.py data/final
-python validate_final.py <klasör> --split full
+python validate_final.py data/final/sanitized --split sanitized
+python validate_final.py data/final/full --split full
 ```
 
 Nihai dosyalar orijinal MBPP ile karşılaştırılır. Şunlar hata sayılır ve script 1 koduyla çıkar:
@@ -137,8 +148,16 @@ Nihai dosyalar orijinal MBPP ile karşılaştırılır. Şunlar hata sayılır v
 hf upload firatmio/mbpp-tr data/final . --repo-type dataset
 ```
 
-Veri seti kartı (`data/final/README.md`) split'leri dosyalarla eşleştirir. Kartta değişiklik yapılırsa
-hem bu repoya commit edilmeli hem de Hugging Face'e yüklenmelidir.
+Veri seti kartı (`data/final/README.md`) iki config'i ve split'lerini dosyalarla eşleştirir; alan
+türleri de kartta (`dataset_info`) açıkça tanımlıdır. Bu tanım olmadan, çoğu satırda boş olan liste
+alanları yüzünden `load_dataset` hata verir. Alan eklenir veya değişirse kart da güncellenmelidir.
+Yüklemeden önce yerelde deneyin:
+
+```bash
+python -c "from datasets import load_dataset; print(load_dataset('data/final', 'full'))"
+```
+
+Kartta değişiklik yapılırsa hem bu repoya commit edilmeli hem de Hugging Face'e yüklenmelidir.
 
 ## Dosya yapısı
 
@@ -151,7 +170,8 @@ hem bu repoya commit edilmeli hem de Hugging Face'e yüklenmelidir.
 | `spot_check.py` | Taslaklardan rastgele örnek gösterme |
 | `data/mbpp_tr_<split>.jsonl` | Sanitized taslakları ve kararları (inceleme geçmişi) |
 | `data/full/` | Full config taslakları ve kararları |
-| `data/final/` | Yayımlanan veri seti ve veri seti kartı |
+| `data/final/sanitized/`, `data/final/full/` | Yayımlanan veri seti |
+| `data/final/README.md` | Veri seti kartı |
 
 ## Veri formatı
 

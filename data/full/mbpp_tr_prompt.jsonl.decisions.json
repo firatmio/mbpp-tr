@@ -1,0 +1,94 @@
+{
+  "1": {
+    "status": "approved",
+    "final_tr": "Verilen cost[][] maliyet matrisi ve cost[][] içindeki bir (m, n) konumu için (0, 0) noktasından (m, n) noktasına ulaşan en düşük maliyetli yolu bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen maliyet matrisi cost[][] ve cost[][] içindeki (m, n) konumu için (0, 0) noktasından (m, n) noktasına ulaşan en düşük maliyetli yolu bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.409+00:00"
+  },
+  "2": {
+    "status": "approved",
+    "final_tr": "Verilen iki demet listesinden benzer elemanları bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen iki tuple listesinden benzer elemanları bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.410+00:00"
+  },
+  "3": {
+    "status": "approved",
+    "final_tr": "Asal olmayan sayıları belirleyen bir Python fonksiyonu yazın.",
+    "draft_tr": "Asal olmayan sayıları belirleyen bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "İngilizce metni birebir aynı olan onaylı çeviriden alındı: mbpp_tr_prompt.jsonl",
+    "reviewer": "claude",
+    "reused_from": "mbpp_tr_prompt.jsonl",
+    "updated_at": "2026-09-16T17:02:12.578+00:00"
+  },
+  "4": {
+    "status": "approved",
+    "final_tr": "Heap kuyruğu algoritmasını kullanarak, verilen bir sayı listesinden en büyük tam sayıları bulan bir fonksiyon yazın.",
+    "draft_tr": "Heap kuyruk algoritmasını kullanarak, verilen bir sayı listesinden en büyük tam sayıları bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.410+00:00"
+  },
+  "5": {
+    "status": "approved",
+    "final_tr": "Verilen 3 x n tahtayı 2 x 1 boyutundaki domino taşlarıyla doldurmanın kaç farklı yolu olduğunu bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen 3 x n tahtayı 2 x 1 boyutundaki domino taşlarıyla doldurmanın kaç farklı yolu olduğunu bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.411+00:00"
+  },
+  "6": {
+    "status": "approved",
+    "final_tr": "İki sayının yalnızca bir bit konumunda farklı olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "İki sayının yalnızca bir bit konumunda farklı olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "İngilizce metni birebir aynı olan onaylı çeviriden alındı: mbpp_tr_prompt.jsonl",
+    "reviewer": "claude",
+    "reused_from": "mbpp_tr_prompt.jsonl",
+    "updated_at": "2026-09-16T17:02:12.578+00:00"
+  },
+  "7": {
+    "status": "approved",
+    "final_tr": "Regex kullanarak bir string'de en az 4 karakter uzunluğundaki tüm kelimeleri bulan bir fonksiyon yazın.",
+    "draft_tr": "Regex kullanarak bir string'de en az 4 karakter uzunluğundaki tüm kelimeleri bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.411+00:00"
+  },
+  "8": {
+    "status": "approved",
+    "final_tr": "Lambda fonksiyonunu kullanarak bir listedeki her bir elemanın karesini bulan bir fonksiyon yazın.",
+    "draft_tr": "Lambda fonksiyonunu kullanarak bir listedeki her bir elemanın karesini bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.411+00:00"
+  },
+  "9": {
+    "status": "approved",
+    "final_tr": "Aynı string'i elde etmek için gereken en az dönüş sayısını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Aynı string'i elde etmek için gereken minimum dönüş sayısını bulmak üzere bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.411+00:00"
+  },
+  "10": {
+    "status": "approved",
+    "final_tr": "Bir veri kümesinden en küçük n elemanı alan bir fonksiyon yazın.",
+    "draft_tr": "Bir veri kümesinden en küçük n öğeyi alan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T17:13:33.411+00:00"
+  }
+}
