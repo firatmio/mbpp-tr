@@ -39,6 +39,12 @@ değiştirilmeden aktarılmıştır.
 *A Turkish translation of the sanitized subset of MBPP. Each row contains the original English
 task description and its Turkish translation; code and tests are copied unchanged from the source.*
 
+## Dataset Sources
+
+- **Repository (çeviri, inceleme ve doğrulama araçları):** https://github.com/firatmio/mbpp-tr
+- **Kaynak veri seti:** https://huggingface.co/datasets/google-research-datasets/mbpp
+- **Kaynak makale:** [Program Synthesis with Large Language Models](https://arxiv.org/abs/2108.07732)
+
 ## Kullanım
 
 ```python
