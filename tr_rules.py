@@ -35,6 +35,9 @@ def _normalize_fragment(text: str) -> str:
     text = re.sub(rf"\b({_TR_NOUNS})'(?=[{_TR_LOWER}])", r"\1", text)
     # Hitap tutarlılığı: DeepL bazen "yazınız" üretiyor, veri setinde "yazın" kullanılıyor
     text = re.sub(r"\byazınız\b", "yazın", text)
+    # Sanitized incelemesinde sık görülen yazım hataları
+    text = re.sub(r"\bk'nc[ıiuü]\b", "k'ıncı", text)
+    text = re.sub(r"\bsözlükü\b", "sözlüğü", text)
     return text
 
 

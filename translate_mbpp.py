@@ -1,9 +1,11 @@
 """
-MBPP (Mostly Basic Python Problems) dataset'ini Ollama üzerinden
-yerel bir modelle (varsayılan: gemma3:4b) Türkçe'ye çevirir.
+MBPP (Mostly Basic Python Problems) dataset'ini Türkçeye çevirir.
+Varsayılan motor DeepL API'dir (sözlüklü); --engine ollama ile yerel model kullanılabilir.
 
 Kullanım:
-    python translate_mbpp.py --start 0 --end 50 --out data/mbpp_tr_part1.jsonl
+    python translate_mbpp.py --hf-split test --out data/mbpp_tr_test.jsonl --no-review
+    python translate_mbpp.py --split full --hf-split test --out data/full/mbpp_tr_test.jsonl \
+        --no-review --reuse-from "data/mbpp_tr_*.jsonl"
 
 MBPP lisansı: CC-BY-4.0 (google-research-datasets/mbpp)
 Bu script sadece görev açıklamasını ('prompt' / 'text') çevirir;
@@ -17,15 +19,20 @@ dosyasına yazılır ve bir sonraki çalıştırmada yeniden denenir.
 Her çeviri İngilizceye geri çevrilip orijinalle karşılaştırılır; sonuç
 <out>.review.jsonl dosyasına yazılır. Anlamı kaymış olabilecek satırlar
 "flagged": true ile işaretlenir (kapatmak için --no-review).
+
+--reuse-from verilirse, İngilizce metni birebir aynı olan satırlarda o dosyaların
+onaylı çevirileri kullanılır ve çıktının karar dosyasına onaylı olarak eklenir.
 """
 
 import argparse
+import glob
 import hashlib
 import json
 import os
 import re
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -251,6 +258,10 @@ DEEPL_GLOSSARY = {
     "digits": "rakamlar",
     "element": "eleman",
     "elements": "elemanlar",
+    "substring": "alt string",
+    "substrings": "alt string'ler",
+    "sublist": "alt liste",
+    "sublists": "alt listeler",
     "lowercase": "küçük harf",
     "uppercase": "büyük harf",
 }
@@ -481,6 +492,60 @@ def load_done_task_ids(out_path: Path) -> set:
     return done
 
 
+def load_approved_translations(patterns: list) -> dict:
+    """Daha önce onaylanmış çevirileri task_id → {prompt_en, prompt_tr, reviewer} olarak yükler.
+
+    Taslak dosyaları (ör. data/mbpp_tr_test.jsonl) verilir; onaylar yanlarındaki
+    .decisions.json dosyalarından okunur.
+    """
+    approved = {}
+    for pattern in patterns:
+        for path in sorted(Path(p) for p in glob.glob(pattern)):
+            decisions_path = path.with_name(path.name + ".decisions.json")
+            if not path.name.endswith(".jsonl") or not decisions_path.exists():
+                continue
+            decisions = json.loads(decisions_path.read_text(encoding="utf-8"))
+            with path.open(encoding="utf-8") as f:
+                for line in f:
+                    if not line.strip():
+                        continue
+                    r = json.loads(line)
+                    d = decisions.get(str(r["task_id"]))
+                    if d and d["status"] == "approved":
+                        approved[r["task_id"]] = {
+                            "prompt_en": r["prompt_en"],
+                            "prompt_tr": d["final_tr"],
+                            "reviewer": d.get("reviewer") or "human",
+                            "source": path.name,
+                        }
+    return approved
+
+
+def save_reused_decisions(out_path: Path, reused: dict) -> None:
+    """Yeniden kullanılan çevirileri çıktının karar dosyasına onaylı olarak ekler (mevcut kararlara dokunmaz)."""
+    if not reused:
+        return
+    decisions_path = out_path.with_name(out_path.name + ".decisions.json")
+    decisions = (json.loads(decisions_path.read_text(encoding="utf-8"))
+                 if decisions_path.exists() else {})
+    now = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+    for task_id, src in reused.items():
+        decisions.setdefault(str(task_id), {
+            "status": "approved",
+            "final_tr": src["prompt_tr"],
+            "draft_tr": src["prompt_tr"],
+            "edited": False,
+            "note": f"İngilizce metni birebir aynı olan onaylı çeviriden alındı: {src['source']}",
+            "reviewer": src["reviewer"],
+            "reused_from": src["source"],
+            "updated_at": now,
+        })
+    tmp = decisions_path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(dict(sorted(decisions.items(), key=lambda kv: int(kv[0]))),
+                              ensure_ascii=False, indent=2), encoding="utf-8")
+    os.replace(tmp, decisions_path)
+
+
 def main():
     parser = argparse.ArgumentParser(description="MBPP dataset'ini Türkçe'ye çevirir")
     parser.add_argument("--start", type=int, default=0, help="Başlangıç index'i")
@@ -497,6 +562,9 @@ def main():
                         help="Geri çeviri kontrolünü atla")
     parser.add_argument("--engine", type=str, default="deepl", choices=["deepl", "ollama"],
                         help="Çeviri motoru (deepl için DEEPL_API_KEY ortam değişkeni gerekir)")
+    parser.add_argument("--reuse-from", nargs="+", default=[],
+                        help="İngilizce metni birebir aynı satırlarda bu taslak dosyalarının onaylı "
+                             "çevirilerini kullan (ör. \"data/mbpp_tr_*.jsonl\")")
     args = parser.parse_args()
 
     if args.start < 0:
@@ -543,60 +611,86 @@ def main():
     print(f"{len(subset)} satır ({args.start}-{end}), {len(done_ids)} tanesi zaten çevrilmiş. "
           f"Çıktı: {out_path}")
 
+    approved = load_approved_translations(args.reuse_from)
+    if args.reuse_from:
+        print(f"Yeniden kullanılabilecek {len(approved)} onaylı çeviri yüklendi.")
+
     translated = skipped = flagged = 0
     failed = []
-    with out_path.open("a", encoding="utf-8") as f, review_path.open("a", encoding="utf-8") as rf:
-        for i, row in enumerate(subset):
-            task_id = row["task_id"]
-            if task_id in done_ids:
-                skipped += 1
-                continue
+    reused = {}
+    try:
+        with out_path.open("a", encoding="utf-8") as f, review_path.open("a", encoding="utf-8") as rf:
+            for i, row in enumerate(subset):
+                task_id = row["task_id"]
+                if task_id in done_ids:
+                    skipped += 1
+                    continue
 
-            # 'sanitized' config'te alan adı 'prompt', 'full' config'te 'text'
-            source_key = "prompt" if "prompt" in row else "text"
-            source_text = row[source_key]
-            print(f"[{i + 1}/{len(subset)}] task_id={task_id} çevriliyor...")
+                # 'sanitized' config'te alan adı 'prompt', 'full' config'te 'text'
+                source_key = "prompt" if "prompt" in row else "text"
+                source_text = row[source_key]
+                # Çeviri dışındaki tüm orijinal alanlar (test_imports, test_setup_code vb.) korunur
+                extra_fields = {k: v for k, v in row.items() if k not in ("task_id", source_key)}
 
-            try:
-                prompt_tr = normalize_tr(translate(source_text))
-            except DeepLQuotaExceeded as e:
-                print(f"  DURDURULDU: {e}. Kalan satırlar için kota yenilenince aynı komutu çalıştırın.",
-                      file=sys.stderr)
-                break
-            except RuntimeError as e:
-                print(f"  HATA, atlanıyor: {e}", file=sys.stderr)
-                failed.append({"task_id": task_id, "error": str(e)})
-                continue
+                # İngilizce metin birebir aynıysa onaylı çeviri kullanılır; DeepL'e gönderilmez
+                prior = approved.get(task_id)
+                if prior and prior["prompt_en"].strip() == source_text.strip():
+                    record = {"task_id": task_id, "prompt_en": source_text, "prompt_tr": prior["prompt_tr"]}
+                    record.update(extra_fields)
+                    f.write(json.dumps(record, ensure_ascii=False) + "\n")
+                    f.flush()
+                    reused[task_id] = prior
+                    continue
 
-            # Çeviri dışındaki tüm orijinal alanlar (test_imports, test_setup_code vb.) korunur
-            record = {"task_id": task_id, "prompt_en": source_text, "prompt_tr": prompt_tr}
-            record.update({k: v for k, v in row.items() if k not in ("task_id", source_key)})
+                print(f"[{i + 1}/{len(subset)}] task_id={task_id} çevriliyor...")
 
-            if not args.no_review:
                 try:
-                    review = review_translation(source_text, prompt_tr, back_translate)
-                except (RuntimeError, DeepLQuotaExceeded) as e:
-                    # Kontrol yapılamadıysa çeviri yine kaydedilir ama incelemeye düşer
-                    review = {"back_translation": None, "flagged": True,
-                              "reasons": [f"kontrol başarısız: {e}"]}
-                if review["flagged"]:
-                    flagged += 1
-                    print(f"  İŞARETLENDİ: {'; '.join(review['reasons'])}")
-                review_record = {"task_id": task_id, "prompt_en": source_text, "prompt_tr": prompt_tr}
-                review_record.update(review)
-                rf.write(json.dumps(review_record, ensure_ascii=False) + "\n")
-                rf.flush()
+                    prompt_tr = normalize_tr(translate(source_text))
+                except DeepLQuotaExceeded as e:
+                    print(f"  DURDURULDU: {e}. Kalan satırlar için kota yenilenince aynı komutu çalıştırın.",
+                          file=sys.stderr)
+                    break
+                except RuntimeError as e:
+                    print(f"  HATA, atlanıyor: {e}", file=sys.stderr)
+                    failed.append({"task_id": task_id, "error": str(e)})
+                    continue
 
-            f.write(json.dumps(record, ensure_ascii=False) + "\n")
-            f.flush()  # her satırdan sonra diske yaz, kesinti olursa veri kaybolmasın
-            translated += 1
+                record = {"task_id": task_id, "prompt_en": source_text, "prompt_tr": prompt_tr}
+                record.update(extra_fields)
+
+                if not args.no_review:
+                    try:
+                        review = review_translation(source_text, prompt_tr, back_translate)
+                    except (RuntimeError, DeepLQuotaExceeded) as e:
+                        # Kontrol yapılamadıysa çeviri yine kaydedilir ama incelemeye düşer
+                        review = {"back_translation": None, "flagged": True,
+                                  "reasons": [f"kontrol başarısız: {e}"]}
+                    if review["flagged"]:
+                        flagged += 1
+                        print(f"  İŞARETLENDİ: {'; '.join(review['reasons'])}")
+                    review_record = {"task_id": task_id, "prompt_en": source_text, "prompt_tr": prompt_tr}
+                    review_record.update(review)
+                    rf.write(json.dumps(review_record, ensure_ascii=False) + "\n")
+                    rf.flush()
+
+                f.write(json.dumps(record, ensure_ascii=False) + "\n")
+                f.flush()  # her satırdan sonra diske yaz, kesinti olursa veri kaybolmasın
+                translated += 1
+    finally:
+        # Kota dolması veya Ctrl+C durumunda da yeniden kullanılan satırların onayları kaydedilsin
+        save_reused_decisions(out_path, reused)
+
+    # Geri çeviri kapalıyken boş kalan inceleme dosyası bırakılmaz
+    if review_path.exists() and review_path.stat().st_size == 0:
+        review_path.unlink()
 
     if failed:
         with failed_path.open("w", encoding="utf-8") as ff:
             for item in failed:
                 ff.write(json.dumps(item, ensure_ascii=False) + "\n")
 
-    print(f"\nTamamlandı. Çevrilen: {translated}, zaten var: {skipped}, başarısız: {len(failed)}")
+    print(f"\nTamamlandı. Çevrilen: {translated}, onaylı çeviriden alınan: {len(reused)}, "
+          f"zaten var: {skipped}, başarısız: {len(failed)}")
     print(f"Sonuçlar: {out_path}")
     if not args.no_review:
         print(f"İnceleme gereken: {flagged} satır ({review_path}). "

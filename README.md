@@ -1,15 +1,33 @@
 # MBPP-TR
 
-[MBPP (Mostly Basic Python Problems)](https://huggingface.co/datasets/google-research-datasets/mbpp) veri setinin
-görev açıklamalarını Türkçeye çevirmek, çevirileri incelemek ve nihai veri setini doğrulamak için araçlar.
+[MBPP (Mostly Basic Python Problems)](https://huggingface.co/datasets/google-research-datasets/mbpp)
+veri setinin Türkçe çevirisi ve bu çeviriyi üretmek, incelemek ve doğrulamak için kullanılan araçlar.
 
-Yayımlanan veri seti `data/final/` klasöründedir; veri seti kartı (Hugging Face README'si)
-[data/final/README.md](data/final/README.md) dosyasıdır.
+- **Veri seti:** https://huggingface.co/datasets/firatmio/mbpp-tr
+- **Veri seti kartı:** [data/final/README.md](data/final/README.md)
 
-## Neden
+| Config | Satır | Durum |
+|---|---|---|
+| `sanitized` | 427 | Yayımlandı (`data/final/`) |
+| `full` | 974 | Hazırlanıyor (`data/full/`) |
 
-Türkçe kod-instruction veri seti kaynakları kısıtlı. Bu proje, İngilizce MBPP veri setini
-temel alarak Türkçe soru → Python kodu formatında bir veri seti üretmeyi amaçlıyor.
+## Süreç
+
+```
+MBPP (Hugging Face)
+   │  translate_mbpp.py   DeepL taslağı + sözlük + otomatik düzeltmeler (tr_rules.py)
+   ▼
+data/.../mbpp_tr_<split>.jsonl                  taslaklar
+   │  review_tool.py      satır satır onay / düzeltme
+   ▼
+data/.../mbpp_tr_<split>.jsonl.decisions.json   kararlar
+   │  review_tool.py --export-dir
+   ▼
+data/final/mbpp_tr_<split>.jsonl                yalnızca onaylı satırlar
+   │  validate_final.py   orijinalle karşılaştırma + testleri çalıştırma
+   ▼
+Hugging Face
+```
 
 ## Kurulum
 
@@ -17,19 +35,9 @@ temel alarak Türkçe soru → Python kodu formatında bir veri seti üretmeyi a
 pip install -r requirements.txt
 ```
 
-Geri çeviri kontrolü veya `--engine ollama` kullanılacaksa [Ollama](https://ollama.com)
-kurulu ve çalışıyor olmalı, `gemma3:4b` modeli çekilmiş olmalı:
-
-```bash
-ollama pull gemma3:4b
-```
-
-### Çeviri motoru
-
-Varsayılan motor [DeepL API](https://www.deepl.com/pro-api). Ücretsiz katman ayda
-500.000 karakter veriyor; MBPP'nin tamamı (sanitized + full, tüm split'ler) yaklaşık
-116.000 karakter, geri çeviri kontrolüyle yaklaşık 232.000 karakter tutuyor.
-Anahtarı proje kökündeki `.env` dosyasına yazın (bu dosya `.gitignore`'da):
+Çeviri için bir [DeepL API](https://www.deepl.com/pro-api) anahtarı gerekir. Ücretsiz katman ayda
+500.000 karakter verir; MBPP'nin tamamı (sanitized + full) yaklaşık 116.000 karakterdir.
+Anahtarı proje kökündeki `.env` dosyasına yazın (bu dosya `.gitignore`'dadır):
 
 ```
 DEEPL_API_KEY="anahtarınız:fx"
@@ -37,110 +45,115 @@ DEEPL_API_KEY="anahtarınız:fx"
 
 Terminalde `DEEPL_API_KEY` ortam değişkeni ayarlıysa `.env` yerine o kullanılır.
 
-Terimlerin tutarlı çevrilmesi için script DeepL hesabında bir sözlük (glossary) oluşturur.
-Ücretsiz katman tek sözlüğe izin verdiği için sözlük içeriği değiştiğinde script'in
-oluşturduğu eski `mbpp-tr-*` sözlüğü silinip yenisi kurulur.
+[Ollama](https://ollama.com) yalnızca isteğe bağlı iki özellik için gerekir: yerel modelle çeviri
+(`--engine ollama`) ve geri çeviri kontrolü. İkisi de varsayılan akışta kullanılmaz.
 
-Yerel model kullanmak için `--engine ollama`. Hangi motor seçilirse seçilsin,
-geri çeviri karşılaştırması yerel Ollama modeliyle yapılır.
+## 1. Çeviri
 
-## Kullanım
+Her split ayrı çevrilir:
 
 ```bash
-# İlk 50 satırı çevir
-python translate_mbpp.py --start 0 --end 50 --out data/mbpp_tr_part1.jsonl
+# sanitized
+python translate_mbpp.py --hf-split test --out data/mbpp_tr_test.jsonl --no-review
 
-# Kalite kontrolü - rastgele 10 örneği gözden geçir
-python spot_check.py data/mbpp_tr_part1.jsonl --n 10
+# full: İngilizce metni sanitized ile birebir aynı olan satırlar onaylı çeviriden alınır
+python translate_mbpp.py --split full --hf-split test --out data/full/mbpp_tr_test.jsonl \
+    --no-review --reuse-from "data/mbpp_tr_*.jsonl"
 ```
-
-### Seçenekler
 
 | Argüman | Varsayılan | Açıklama |
 |---|---|---|
-| `--split` | `sanitized` | MBPP config'i: `sanitized` (427 görev) veya `full` (974 görev) |
+| `--split` | `sanitized` | MBPP config'i: `sanitized` (427 satır) veya `full` (974 satır) |
 | `--hf-split` | `test` | `train`, `test`, `validation` veya `prompt` |
+| `--out` | (zorunlu) | Taslak JSONL dosyası |
 | `--start` / `--end` | tümü | Çevrilecek index aralığı (`end` dahil değil) |
+| `--reuse-from` | yok | Onaylı çevirileri yeniden kullanılacak taslak dosyaları (joker karakter kullanılabilir) |
+| `--no-review` | kapalı | Geri çeviri kontrolünü atlar (önerilir; aşağıya bakın) |
+| `--engine` | `deepl` | `deepl` veya `ollama` |
 | `--overwrite` | kapalı | Mevcut çıktıyı silip baştan başlar |
-| `--engine` | `deepl` | Çeviri motoru: `deepl` veya `ollama` |
-| `--no-review` | kapalı | Geri çeviri kontrolünü atlar |
 
-### Geri çeviri kontrolü
+- **Kaldığı yerden devam:** Aynı `--out` ile tekrar çalıştırınca zaten çevrilmiş satırlar atlanır.
+  Çevrilemeyenler `<out>.failed.jsonl` dosyasına yazılır ve sonraki çalıştırmada yeniden denenir.
+  DeepL kotası dolarsa script temiz şekilde durur.
+- **Sözlük:** Terim tutarlılığı için DeepL hesabında bir sözlük (glossary) oluşturulur
+  (function → fonksiyon, tuple → demet, digit → rakam…). Ücretsiz katman tek sözlüğe izin verdiği
+  için içerik değişince script'in oluşturduğu eski `mbpp-tr-*` sözlüğü silinip yenisi kurulur.
+- **Otomatik düzeltmeler:** Anlamı değiştirmeyen düzeltmeler çeviriden sonra uygulanır
+  (string'i/string'de kesme işareti, "yazınız" → "yazın" gibi). Kurallar [tr_rules.py](tr_rules.py) dosyasındadır;
+  bağlantıların içine dokunulmaz.
+- **Geri çeviri kontrolü:** `--no-review` verilmezse her çeviri İngilizceye geri çevrilip yerel bir
+  modelle orijinalle karşılaştırılır. Sanitized çevirisinde çok yanlış alarm verdiği ve gerçek
+  hataları kaçırdığı görüldü; inceleme adımının yerini tutmaz.
 
-Her çeviri aynı modelle İngilizceye geri çevrilir ve orijinalle karşılaştırılır
-(model yargısı + "twice", "first", sayılar gibi kritik kelimelerin kontrolü).
-Sonuçlar `<out>.review.jsonl` dosyasına yazılır. İşaretlenen satırları görmek için:
-
-```bash
-python spot_check.py data/mbpp_tr_part1.jsonl --flagged
-```
-
-Kontrol anlam kaymalarını yakalamak içindir; dilbilgisi hatalarını yakalamaz ve
-yanlış alarm verebilir. Elle incelemenin yerini tutmaz.
-
-Varsayılan ayarlar yalnızca `test` split'ini çevirir. Tüm veri seti için her split'i
-ayrı ayrı çalıştırın:
+## 2. İnceleme
 
 ```bash
-python translate_mbpp.py --hf-split train --out data/mbpp_tr_train.jsonl
-python translate_mbpp.py --hf-split validation --out data/mbpp_tr_validation.jsonl
-python translate_mbpp.py --hf-split prompt --out data/mbpp_tr_prompt.jsonl
+python review_tool.py data/mbpp_tr_test.jsonl data/mbpp_tr_train.jsonl data/mbpp_tr_validation.jsonl data/mbpp_tr_prompt.jsonl
 ```
 
-### Kesinti ve tekrar deneme
+Tarayıcıda bir onay arayüzü açılır:
 
-Aynı `--out` dosyasıyla komutu tekrar çalıştırırsanız zaten çevrilmiş `task_id`'ler
-atlanır, script kaldığı yerden devam eder. Çevrilemeyen satırlar
-`<out>.failed.jsonl` dosyasına yazılır ve bir sonraki çalıştırmada yeniden denenir.
+- İngilizce metin, düzenlenebilir Türkçe taslak, kod ve testler bir arada gösterilir.
+- Terim ve yazım uyarıları siz yazarken güncellenir.
+- <kbd>Ctrl</kbd>+<kbd>Enter</kbd> onaylar ve sonraki satıra geçer; <kbd>Alt</kbd>+<kbd>S</kbd> notla birlikte "sorunlu" işaretler;
+  <kbd>Alt</kbd>+<kbd>←</kbd>/<kbd>→</kbd> satırlar arasında gezinir.
+- Birden fazla dosya verilirse üstteki menüden seçilir. Filtreler: bekleyenler, otomatik uyarılılar,
+  sorunlular, onaylılar, Claude'un onayladıkları.
+- Kararlar her işlemde `<dosya>.decisions.json` dosyasına yazılır; araç kapatılıp açılınca kaldığı yerden devam eder.
+  Her kararda kimin incelediği (`reviewer`: `human`, `claude`, `human+claude`) saklanır.
 
-## İnceleme ve onay
+**Aynı ağdaki başka bir bilgisayardan:** `--host 0.0.0.0` ekleyin. Araç, gizli bir token içeren adresi
+terminale yazar; token olmadan erişim reddedilir. Windows güvenlik duvarında yalnızca **Özel ağ** için
+izin verin. Aynı satır iki yerden değiştirilirse ikinci kayıt reddedilir ve sayfa güncel hali yükler.
 
-Otomatik çeviriler taslaktır; nihai veri setine yalnızca onaylanmış satırlar girer.
-Onay aracı tarayıcıda açılır:
+> Araç açıkken karar dosyalarını başka bir yoldan (script vb.) değiştirmeyin; araç hafızasındaki
+> kararlarla dosyanın üzerine yazabilir.
 
-```bash
-python review_tool.py data/mbpp_tr_test.jsonl
-```
-
-- İngilizce metin, düzenlenebilir Türkçe taslak, geri çeviri, kod ve testler bir arada gösterilir.
-- Terim ve yazım uyarıları (`tr_rules.py`) siz yazarken güncellenir.
-- <kbd>Ctrl</kbd>+<kbd>Enter</kbd> onaylar ve sonraki satıra geçer; <kbd>Alt</kbd>+<kbd>S</kbd> notla birlikte "sorunlu" işaretler.
-- Kararlar her işlemde `<dosya>.decisions.json` dosyasına yazılır; araç kapatılıp açıldığında kaldığı yerden devam eder.
-
-Birden fazla dosya verilirse arayüzde açılır menüden seçilir.
-
-**Aynı ağdaki başka bir bilgisayardan inceleme:** `--host 0.0.0.0` ile başlatın. Araç,
-adresi gizli bir token ile birlikte terminale yazar; token olmadan erişim reddedilir.
-Windows ilk seferde güvenlik duvarı izni sorar, yalnızca **Özel ağ** için izin verin.
-Aynı satır iki yerden değiştirilirse ikinci kayıt reddedilir ve sayfa güncel hali yükler.
-
-```powershell
-python review_tool.py data/mbpp_tr_test.jsonl data/mbpp_tr_train.jsonl data/mbpp_tr_validation.jsonl data/mbpp_tr_prompt.jsonl --host 0.0.0.0
-```
-
-Her kararda kimin incelediği (`reviewer`: `human`, `claude` veya `human+claude`) saklanır.
-
-Onaylı satırları nihai veri setine aktarmak için:
+## 3. Dışa aktarma
 
 ```bash
 python review_tool.py data/mbpp_tr_test.jsonl data/mbpp_tr_train.jsonl data/mbpp_tr_validation.jsonl data/mbpp_tr_prompt.jsonl --export-dir data/final
 ```
 
-Yalnızca onaylanmış satırlar, onaylanan Türkçe metinle yazılır.
+Yalnızca onaylanmış satırlar, onaylanan Türkçe metinle yazılır. Onaylanmamış satır kalırsa uyarı verilir.
 
-## Doğrulama
+## 4. Doğrulama
 
 ```bash
 python validate_final.py data/final
+python validate_final.py <klasör> --split full
 ```
 
-Nihai dosyaları orijinal MBPP ile karşılaştırır: eksik/fazla/tekrar eden `task_id`,
-orijinalden farklılaşmış alanlar, boş çeviriler ve bozulmuş bağlantılar hata sayılır.
-Ayrıca her satırın `code`'u kendi testleriyle ayrı bir süreçte çalıştırılır.
+Nihai dosyalar orijinal MBPP ile karşılaştırılır. Şunlar hata sayılır ve script 1 koduyla çıkar:
 
-## Veri Formatı
+- eksik, fazla veya tekrar eden `task_id`
+- `prompt_en` veya çeviri dışındaki herhangi bir alanın orijinalden farklı olması
+- boş çeviri, bozulmuş bağlantı
+- orijinalde geçen bir testin çeviride başarısız olması (her satırın `code`'u kendi testleriyle ayrı bir süreçte çalıştırılır)
 
-`sanitized` config'inden üretilen bir satır:
+## 5. Yayınlama
+
+```bash
+hf upload firatmio/mbpp-tr data/final . --repo-type dataset
+```
+
+Veri seti kartı (`data/final/README.md`) split'leri dosyalarla eşleştirir. Kartta değişiklik yapılırsa
+hem bu repoya commit edilmeli hem de Hugging Face'e yüklenmelidir.
+
+## Dosya yapısı
+
+| Yol | İçerik |
+|---|---|
+| `translate_mbpp.py` | Çeviri |
+| `tr_rules.py` | Otomatik düzeltmeler ve inceleme uyarıları |
+| `review_tool.py`, `review_ui.html` | Onay aracı |
+| `validate_final.py` | Doğrulama |
+| `spot_check.py` | Taslaklardan rastgele örnek gösterme |
+| `data/mbpp_tr_<split>.jsonl` | Sanitized taslakları ve kararları (inceleme geçmişi) |
+| `data/full/` | Full config taslakları ve kararları |
+| `data/final/` | Yayımlanan veri seti ve veri seti kartı |
+
+## Veri formatı
 
 ```json
 {
@@ -154,18 +167,11 @@ Ayrıca her satırın `code`'u kendi testleriyle ayrı bir süreçte çalıştı
 }
 ```
 
-`prompt_en`/`prompt_tr` dışındaki tüm alanlar orijinal MBPP'den değişmeden aktarılır.
-`sanitized` config'inde `test_imports`, `full` config'inde `test_setup_code` ve
-`challenge_test_list` alanları da korunur. Testleri çalıştırırken bu alanları
-kullanın, bazı testler bunlar olmadan hata verir.
+`prompt_en`/`prompt_tr` dışındaki tüm alanlar orijinal MBPP'den değişmeden aktarılır. `full` config'inde
+`test_imports` yerine `test_setup_code` ve `challenge_test_list` alanları bulunur.
 
 ## Lisans
 
-Bu proje CC-BY-4.0 lisanslı [MBPP](https://huggingface.co/datasets/google-research-datasets/mbpp)
-veri setinin türetilmiş bir çalışmasıdır. Orijinal kaynağa atıf zorunludur.
-Bu repo da CC-BY-4.0 ile yayınlanmaktadır.
-
-## Kalite Notu
-
-Taslaklar makine çevirisidir. Yayımlanan satırların nasıl incelendiği (insan / Claude
-dağılımı dahil) veri seti kartında belgelenmiştir.
+Bu proje, CC-BY-4.0 lisanslı [MBPP](https://huggingface.co/datasets/google-research-datasets/mbpp) veri setinin
+türetilmiş bir çalışmasıdır ve CC-BY-4.0 ile yayımlanır. Kullanırken orijinal çalışmaya
+([Austin et al., 2021](https://arxiv.org/abs/2108.07732)) atıf yapınız.
