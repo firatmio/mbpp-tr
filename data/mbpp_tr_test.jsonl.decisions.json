@@ -1,0 +1,2216 @@
+{
+  "11": {
+    "status": "approved",
+    "final_tr": "Verilen bir karakterin bir string'deki ilk ve son geçtiği yerleri kaldıran bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen karakterin string'deki ilk ve son geçimini kaldırmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "geçimini -> tekrarını [Claude yazım hatasını düzeltti; önceki onaylı metin: Verilen bir karakterin bir string deki ilk ve son geçtiği yerleri kaldıran bir Python fonksiyonu yazın.]",
+    "reviewer": "human+claude",
+    "updated_at": "2026-09-16T16:50:41.317+00:00"
+  },
+  "12": {
+    "status": "approved",
+    "final_tr": "Verilen bir matrisi, satırlarının toplamına göre artan sırada sıralayacak bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir matrisi, satırlarının toplamına göre artan sırada sıralayacak bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:39:08.516+00:00"
+  },
+  "14": {
+    "status": "approved",
+    "final_tr": "Üçgen prizmanın hacmini hesaplamak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Üçgen prizmanın hacmini hesaplamak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:16:59+00:00"
+  },
+  "16": {
+    "status": "approved",
+    "final_tr": "Girdi string'i, alt çizgi ile birleştirilmiş küçük harf dizileri içeriyorsa true, aksi takdirde false değerini döndüren bir fonksiyon yazın.",
+    "draft_tr": "Girdi string'i, alt çizgi ile birleştirilmiş küçük harf dizileri içeriyorsa true, aksi takdirde false değerini döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:39:50.534+00:00"
+  },
+  "17": {
+    "status": "approved",
+    "final_tr": "Kenar uzunluğu girdi olarak verildiğinde bir karenin çevresini döndüren bir fonksiyon yazın.",
+    "draft_tr": "Kenar uzunluğu girdi olarak verildiğinde bir karenin çevresini döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:40:09.372+00:00"
+  },
+  "18": {
+    "status": "approved",
+    "final_tr": "İlk string'de bulunan ve ikinci string'de de bulunan karakterleri ilk string'den kaldıran bir fonksiyon yazın.",
+    "draft_tr": "İlk string'de bulunan ve ikinci string'de de bulunan karakterleri ilk string'den kaldıran bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:40:31.511+00:00"
+  },
+  "19": {
+    "status": "approved",
+    "final_tr": "Verilen bir tam sayı dizisinde yinelenen eleman olup olmadığını bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir tam sayı dizisinde yinelenen eleman olup olmadığını bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:17:33+00:00"
+  },
+  "20": {
+    "status": "approved",
+    "final_tr": "Verilen sayının woodball olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen sayının woodball olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:41:09.092+00:00"
+  },
+  "56": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının, tersinin iki katından bir eksik olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayının, tersinin iki katından bir eksik olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:41:55.130+00:00"
+  },
+  "57": {
+    "status": "approved",
+    "final_tr": "Verilen rakamlar listesinden oluşturulabilecek en büyük sayıyı bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen rakamlar listesinden oluşturulabilecek en büyük sayıyı bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:17:43+00:00"
+  },
+  "58": {
+    "status": "approved",
+    "final_tr": "Verilen iki tam sayının işaretlerinin zıt olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen iki tam sayının işaretlerinin zıt olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:42:20.184+00:00"
+  },
+  "59": {
+    "status": "approved",
+    "final_tr": "n'inci sekizgen sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci sekizgen sayıyı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:42:40.786+00:00"
+  },
+  "61": {
+    "status": "approved",
+    "final_tr": "Rakamlarının toplamı uzunluğuna eşit olan alt dizilerin sayısını sayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Rakamlarının toplamı uzunluğuna eşit olan alt dizilerin sayısını sayan bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T15:43:05.361+00:00"
+  },
+  "62": {
+    "status": "approved",
+    "final_tr": "Bir listedeki en küçük sayıyı bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir listedeki en küçük sayıyı bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:17:51+00:00"
+  },
+  "63": {
+    "status": "approved",
+    "final_tr": "Verilen demet listesindeki mevcut çiftler arasındaki maksimum farkı bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet listesindeki mevcut çiftler arasındaki maksimum farkı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.026+00:00"
+  },
+  "64": {
+    "status": "approved",
+    "final_tr": "Her bir demetin ikinci değerini kullanarak bir demet listesini sıralayacak bir fonksiyon yazın.",
+    "draft_tr": "Her bir demetin ikinci değerini kullanarak bir demet listesini sıralayacak bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.026+00:00"
+  },
+  "65": {
+    "status": "approved",
+    "final_tr": "Bir listeyi düzleştirip tüm elemanlarının toplamını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir listeyi düzleştirip tüm elemanlarının toplamını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.026+00:00"
+  },
+  "66": {
+    "status": "approved",
+    "final_tr": "Bir listede bulunan pozitif sayıların sayısını hesaplayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir listede bulunan pozitif sayıların sayısını hesaplayan bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.026+00:00"
+  },
+  "67": {
+    "status": "approved",
+    "final_tr": "Bir Bell sayıları kümesini bölmenin kaç farklı yolu olduğunu bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir Bell sayıları kümesini bölmenin kaç farklı yolu olduğunu bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:18:12+00:00"
+  },
+  "68": {
+    "status": "approved",
+    "final_tr": "Verilen dizinin monoton olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen dizinin monoton olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "69": {
+    "status": "approved",
+    "final_tr": "Bir listenin verilen alt listeyi içerip içermediğini kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir listenin verilen alt listeyi içerip içermediğini kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:19:10+00:00"
+  },
+  "70": {
+    "status": "approved",
+    "final_tr": "Verilen tüm demetlerin uzunluklarının eşit olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen tüm demetlerin uzunluklarının eşit olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "71": {
+    "status": "approved",
+    "final_tr": "Bir listeyi sıralamak için bir fonksiyon yazın.",
+    "draft_tr": "Bir listeyi sıralamak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:19:21+00:00"
+  },
+  "72": {
+    "status": "approved",
+    "final_tr": "Verilen sayının iki karenin farkı olarak ifade edilip edilemeyeceğini kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen sayının iki karenin farkı olarak ifade edilip edilemeyeceğini kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "74": {
+    "status": "approved",
+    "final_tr": "\"patterns\" dizisinde verilen sıraya uyup uymadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "\"patterns\" dizisinde verilen sıraya uyup uymadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "75": {
+    "status": "approved",
+    "final_tr": "Verilen demet listesinden, tüm elemanları k'ya bölünebilen demetleri bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen tuple listesinden, tüm elemanları k'ya bölünebilen demetleri bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:40.507+00:00"
+  },
+  "77": {
+    "status": "approved",
+    "final_tr": "Bir sayının 11'e bölünebilir olup olmadığını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir sayının 11'e bölünebilir olup olmadığını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:19:43+00:00"
+  },
+  "79": {
+    "status": "approved",
+    "final_tr": "Bir kelimenin uzunluğunun tek olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir kelimenin uzunluğunun tek mi değil mi olduğunu kontrol eden bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:42:45.233+00:00"
+  },
+  "80": {
+    "status": "approved",
+    "final_tr": "n'inci tetrahedral (dörtyüzlü) sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci tetrahedral sayısını bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:42:54.547+00:00"
+  },
+  "82": {
+    "status": "approved",
+    "final_tr": "Bir kürenin hacmini hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir kürenin hacmini hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "83": {
+    "status": "approved",
+    "final_tr": "Verilen string'deki tüm karakterlerin ASCII değerlerinin 26 moduna göre toplanmasıyla elde edilen karakteri bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen string'deki tüm karakterlerin ASCII değerlerinin 26 moduna göre toplanmasıyla elde edilen karakteri bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:19:45+00:00"
+  },
+  "84": {
+    "status": "approved",
+    "final_tr": "Newman-Conway dizisindeki n'inci sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "Newman-Conway dizisindeki n'inci sayıyı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "85": {
+    "status": "approved",
+    "final_tr": "Bir kürenin yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir kürenin yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "86": {
+    "status": "approved",
+    "final_tr": "n'inci merkezli altıgen sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci merkezli altıgen sayıyı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "87": {
+    "status": "approved",
+    "final_tr": "Üç sözlüğü tek bir sözlükte birleştiren bir fonksiyon yazın.",
+    "draft_tr": "Üç sözlükü tek bir sözlükte birleştirecek bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:42:56.219+00:00"
+  },
+  "88": {
+    "status": "approved",
+    "final_tr": "Bir listedeki tüm elemanların sıklığını bulup sonucu bir sözlük olarak döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir listedeki tüm elemanların sıklığını alan ve sonucu bir sözlük olarak döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:42:58.348+00:00"
+  },
+  "89": {
+    "status": "approved",
+    "final_tr": "n'den daha küçük olan en yakın sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "n'den daha küçük olan en yakın sayıyı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "90": {
+    "status": "approved",
+    "final_tr": "En uzun kelimenin uzunluğunu bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "En uzun kelimenin uzunluğunu bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:19:47+00:00"
+  },
+  "91": {
+    "status": "approved",
+    "final_tr": "Verilen bir string değerleri listesinde bir string'in alt string olarak bulunup bulunmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir string değerleri listesinde bir string'in alt string olarak bulunup bulunmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "92": {
+    "status": "approved",
+    "final_tr": "Verilen sayının dalgalı olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen sayının dalgalı olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:20:30+00:00"
+  },
+  "93": {
+    "status": "approved",
+    "final_tr": "'a'nın 'b'. kuvvetini hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "'a'nın 'b' üssündeki değerini hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:00.646+00:00"
+  },
+  "94": {
+    "status": "approved",
+    "final_tr": "Bir demet listesi verildiğinde, ikinci değeri en küçük olan demetin ilk değerini döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir demet listesi verildiğinde, ikinci değeri en küçük olan demetin ilk değerini döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "95": {
+    "status": "approved",
+    "final_tr": "Listelerden oluşan bir listede en küçük listenin uzunluğunu bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Listelerden oluşan bir listede en küçük listenin uzunluğunu bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:21:05+00:00"
+  },
+  "96": {
+    "status": "approved",
+    "final_tr": "Verilen bir tam sayının bölenlerinin sayısını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir tam sayının bölenlerinin sayısını bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:21:23+00:00"
+  },
+  "97": {
+    "status": "approved",
+    "final_tr": "Düzleştirilmiş bir listeler listesindeki her bir elemanın sıklığını bulan ve sonucu bir sözlük içinde döndüren bir fonksiyon yazın.",
+    "draft_tr": "Düzleştirilmiş bir listeler listesindeki her bir elemanın sıklığını bulan ve sonucu bir sözlük içinde döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "98": {
+    "status": "approved",
+    "final_tr": "Bir listedeki tüm sayıları çarpıp sonucu listenin uzunluğuna bölen bir fonksiyon yazın.",
+    "draft_tr": "Bir listedeki tüm sayıları çarpıp, sonucun liste uzunluğuna bölmesini sağlayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:02.209+00:00"
+  },
+  "99": {
+    "status": "approved",
+    "final_tr": "Verilen ondalık sayıyı, başında sıfır içermeyen bir string olarak temsil edilen ikili karşılığına dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Verilen ondalık sayıyı, başında sıfır içermeyen bir string olarak temsil edilen ikili karşılığına dönüştüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "100": {
+    "status": "approved",
+    "final_tr": "Belirtilen bir tam sayıdan büyük olan en küçük palindromu bulan ve sonucu tam sayı olarak döndüren bir fonksiyon yazın",
+    "draft_tr": "Belirtilen bir tam sayıdan bir sonraki en küçük palindromu bulan ve sonucunu tam sayı olarak döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:21:49+00:00"
+  },
+  "101": {
+    "status": "approved",
+    "final_tr": "1 tabanlı indeksleme kullanarak verilen dizideki k'ıncı elemanı bulan bir fonksiyon yazın.",
+    "draft_tr": "1 tabanlı indeksleme kullanarak, verilen dizideki k'ncı elemanı bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:03.466+00:00"
+  },
+  "102": {
+    "status": "approved",
+    "final_tr": "Snake case biçimindeki bir string'i camel case biçimine dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Snake case biçimindeki bir string'i camel case biçimine dönüştüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "103": {
+    "status": "approved",
+    "final_tr": "Euler sayısı a(n, m)'yi bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Euler sayısı a(n, m)'yi bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:21:51+00:00"
+  },
+  "104": {
+    "status": "approved",
+    "final_tr": "Verilen bir liste listesindeki, string'lerden oluşan her bir alt listeyi sıralayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir liste listesindeki her bir alt listeyi sıralayacak bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:04.603+00:00"
+  },
+  "105": {
+    "status": "approved",
+    "final_tr": "Verilen listedeki True değerlerini sayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen listeye \"true\" değerini taşıyan boole değerlerini sayan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:05.770+00:00"
+  },
+  "106": {
+    "status": "approved",
+    "final_tr": "Verilen listeyi verilen demetlere ekleyen bir fonksiyon yazın.",
+    "draft_tr": "Verilen listeyi verilen demetlere ekleyen bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "108": {
+    "status": "approved",
+    "final_tr": "Üç listeyi tek bir sıralı liste halinde birleştirecek bir fonksiyon yazın.",
+    "draft_tr": "Üç listeyi tek bir sıralı liste halinde birleştirecek bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "109": {
+    "status": "approved",
+    "final_tr": "Bir ikili diziyi verilen sayıda döndürdüğünüzde, tek sayı değerine sahip olanların sayısını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen sayıda ikili string'i döndürdüğümüzde tek sayı değerine sahip sayıların sayısını bulan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:22:25+00:00"
+  },
+  "111": {
+    "status": "approved",
+    "final_tr": "Verilen iç içe geçmiş listelerde ortak elemanları bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Verilen iç içe geçmiş listelerde ortak elemanları bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:22:27+00:00"
+  },
+  "113": {
+    "status": "approved",
+    "final_tr": "Bir string'in bir tam sayıyı temsil edip etmediğini kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir string'in bir tam sayıyı temsil edip etmediğini kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "115": {
+    "status": "approved",
+    "final_tr": "Bir listedeki tüm sözlüklerin boş olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir listedeki tüm sözlüklerin boş olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "116": {
+    "status": "approved",
+    "final_tr": "Verilen pozitif tam sayı demetini tek bir tam sayıya dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Verilen pozitif tam sayı demetini tek bir tam sayıya dönüştüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:22:43+00:00"
+  },
+  "117": {
+    "status": "approved",
+    "final_tr": "Bir liste listesindeki dönüştürülebilen tüm elemanları float türüne dönüştürecek bir fonksiyon yazın.",
+    "draft_tr": "Bir liste listesindeki dönüştürülebilen tüm elemanları float türüne dönüştürecek bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "118": {
+    "status": "approved",
+    "final_tr": "Bir string'i, boşluk karakterinden bölünerek elde edilen bir string listesine dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Bir dizgiyi, boşluk karakterine göre bölünmüş bir string listesine dönüştüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:06.786+00:00"
+  },
+  "119": {
+    "status": "approved",
+    "final_tr": "Sıralanmış bir dizide yalnızca bir kez geçen elemanı bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Sıralanmış bir dizide yalnızca bir kez geçen elemanı bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:23:10+00:00"
+  },
+  "120": {
+    "status": "approved",
+    "final_tr": "Verilen bir liste içindeki demetler arasında sayıların çarpımının mutlak değerinin en büyük olduğu çifti bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir liste içindeki demetler arasında sayıların çarpımının mutlak değerinin en büyük olduğu çifti bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:23:46+00:00"
+  },
+  "123": {
+    "status": "approved",
+    "final_tr": "1'den belirtilen sayıya kadar tüm dost sayıların toplamını veren bir fonksiyon yazın.",
+    "draft_tr": "1'den belirtilen sayıya kadar tüm dost sayıların toplamını veren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "124": {
+    "status": "approved",
+    "final_tr": "Bir karmaşık sayının açısını bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Bir karmaşık sayının açısını bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:23:56+00:00"
+  },
+  "125": {
+    "status": "approved",
+    "final_tr": "Verilen ikili string'in herhangi bir alt string'inde 0'ların sayısı ile 1'lerin sayısı arasındaki en büyük farkı bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen ikili string'in herhangi bir alt dizgesinde 0'ların sayısı ile 1'lerin sayısı arasındaki maksimum farkı bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:10.219+00:00"
+  },
+  "126": {
+    "status": "approved",
+    "final_tr": "Verilen iki sayının ortak bölenlerinin toplamını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen iki sayının ortak bölenlerinin toplamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:24:06+00:00"
+  },
+  "127": {
+    "status": "approved",
+    "final_tr": "İki tam sayıyı çarpmak için bir fonksiyon yazın.",
+    "draft_tr": "İki tam sayıyı çarpmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:24:07+00:00"
+  },
+  "128": {
+    "status": "approved",
+    "final_tr": "Verilen bir kelime listesinden n karakterden daha uzun kelimeleri bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir kelime listesinden n karakterden daha uzun kelimeleri bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "129": {
+    "status": "approved",
+    "final_tr": "Bir matrisin sihirli kare olup olmadığını belirleyen bir fonksiyon yazın.",
+    "draft_tr": "Matrisin sihirli kare olup olmadığını hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:11.571+00:00"
+  },
+  "130": {
+    "status": "approved",
+    "final_tr": "Verilen bir listede en yüksek sıklığa sahip öğeyi bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir listede en yüksek sıklığa sahip öğeyi bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:24:26+00:00"
+  },
+  "131": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'deki yalnızca ünlü harfleri ters sıraya koyan bir Python fonksiyonu yazın (burada y, ünlü bir harf değildir).",
+    "draft_tr": "Verilen bir string'deki yalnızca ünlü harfleri ters sıraya koyan bir Python fonksiyonu yazın (burada y, ünlü bir harf değildir).",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "132": {
+    "status": "approved",
+    "final_tr": "Bir demeti string'e dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Bir demeti string'e dönüştüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "133": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayı listesindeki negatif sayıların toplamını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir sayı listesindeki negatif sayıların toplamını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "135": {
+    "status": "approved",
+    "final_tr": "n'inci altıgen sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci altıgen sayıyı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "137": {
+    "status": "approved",
+    "final_tr": "Bir tam sayı dizisinde sıfırların ve sıfır olmayan sayıların oranını bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Bir tam sayı dizisinde sıfırların ve sıfır olmayan sayıların oranını bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:24:35+00:00"
+  },
+  "138": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının, 2'nin sıfır olmayan kuvvetlerinin toplamı şeklinde ifade edilip edilemeyeceğini kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen sayının, sıfırdan farklı 2'nin kuvvetlerinin toplamı olarak ifade edilip edilemeyeceğini kontrol eden bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:24:58+00:00"
+  },
+  "139": {
+    "status": "approved",
+    "final_tr": "Bir dairenin çevresini hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir dairenin çevresini hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.027+00:00"
+  },
+  "140": {
+    "status": "approved",
+    "final_tr": "Listelerden oluşan listeyi düzleştirerek tek bir sayı kümesine dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Listelerden oluşan listeyi tek bir sayı kümesine dönüştürecek bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:12.601+00:00"
+  },
+  "141": {
+    "status": "approved",
+    "final_tr": "Bir listeyi sıralayacak bir fonksiyon yazın.",
+    "draft_tr": "Bir listeyi sıralayacak bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "142": {
+    "status": "approved",
+    "final_tr": "Verilen üç listede aynı konumda birbirinin aynısı olan eleman sayısını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen üç listenin aynı konumlarında bulunan eşleşen öğelerin sayısını hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:13.646+00:00"
+  },
+  "143": {
+    "status": "approved",
+    "final_tr": "Verilen demette bulunan listelerin sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet'te bulunan listelerin sayısını bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "[Claude düzeltti; önceki onaylı metin: Verilen demet'te bulunan listelerin sayısını bulmak için bir fonksiyon yazın.]",
+    "updated_at": "2026-09-16T16:37:39.028+00:00",
+    "reviewer": "human+claude"
+  },
+  "145": {
+    "status": "approved",
+    "final_tr": "Verilen bir dizideki herhangi iki eleman arasındaki maksimum farkı bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir dizideki herhangi iki eleman arasındaki maksimum farkı bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:25:02+00:00"
+  },
+  "160": {
+    "status": "approved",
+    "final_tr": "ax + by = n denklemini sağlayan x ve y tam sayılarını bir demet olarak döndüren, çözüm yoksa None döndüren bir fonksiyon yazın.",
+    "draft_tr": "ax + by = n koşulunu sağlayan x ve y tam sayılarını bir demet olarak döndüren bir fonksiyon yazın; çözüm yoksa None değerini döndürün.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:14.791+00:00"
+  },
+  "161": {
+    "status": "approved",
+    "final_tr": "Verilen bir listeden, başka bir listede bulunan tüm elemanları kaldıran bir fonksiyon yazın.",
+    "draft_tr": "Başka bir listede bulunan belirli bir listeden tüm elemanları kaldıran bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:17.514+00:00"
+  },
+  "162": {
+    "status": "approved",
+    "final_tr": "i=0'dan n // 2'ye kadar (n - 2*i) toplamını hesaplayan bir fonksiyon yazın; örneğin n + (n-2) + (n-4)... (n-x =< 0 olana kadar).",
+    "draft_tr": "i=0'dan n'ye kadar (n - 2*i) toplamını hesaplayan bir fonksiyon yazın // 2, örneğin n + (n-2) + (n-4)... (n-x =< 0 olana kadar).",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:19.282+00:00"
+  },
+  "163": {
+    "status": "approved",
+    "final_tr": "Kenar uzunluğu ve kenar sayısı verilen düzgün bir çokgenin alanını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Kenar uzunluğu ve kenar sayısı verilen bir düzenli çokgenin alanını hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:20.882+00:00"
+  },
+  "164": {
+    "status": "approved",
+    "final_tr": "İki tam sayının bölenlerinin toplamının aynı olup olmadığını belirleyen bir fonksiyon yazın.",
+    "draft_tr": "İki tam sayının bölenlerinin toplamının aynı olup olmadığını belirleyen bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "165": {
+    "status": "approved",
+    "final_tr": "Bir string'deki karakterlerden, İngilizce alfabedeki konumlarıyla aynı konumda bulunanların sayısını sayan bir fonksiyon yazın (büyük/küçük harf duyarlı değildir).",
+    "draft_tr": "Bir string'deki karakterlerden, İngilizce alfabedeki konumlarıyla aynı konumda bulunanların sayısını sayan bir fonksiyon yazın (büyük/küçük harf duyarlı değildir).",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "166": {
+    "status": "approved",
+    "final_tr": "Bir listedeki, XOR işlemi sonucunda çift sayı veren tam sayı çiftlerinin sayısını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir listede, XOR işlemi sonucunda çift sayı olan tam sayıların sayısını sayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:25:17+00:00"
+  },
+  "167": {
+    "status": "approved",
+    "final_tr": "n'den büyük veya n'ye eşit olan, 2'nin en küçük kuvvetini bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "n'den büyük veya n'e eşit olan en küçük 2'nin kuvvetini bulan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:21.748+00:00"
+  },
+  "168": {
+    "status": "approved",
+    "final_tr": "Verilen bir listede bir sayının kaç kez geçtiğini sayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir listede bir sayının kaç kez geçtiğini sayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "170": {
+    "status": "approved",
+    "final_tr": "Bir listede, iki indeksle belirtilen aralıktaki sayıların toplamını bulan bir fonksiyon yazın.",
+    "draft_tr": "İki indeksle belirtilen aralık içindeki bir listedeki sayıların toplamını bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:22.347+00:00"
+  },
+  "171": {
+    "status": "approved",
+    "final_tr": "Kenar uzunluğu verilen düzgün bir beşgenin çevresini hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Kenar uzunluklarından düzenli bir beşgenin çevresini hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:22.897+00:00"
+  },
+  "172": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'de 'std' string'inin kaç kez geçtiğini sayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir string'de 'std' string'inin kaç kez geçtiğini sayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "222": {
+    "status": "approved",
+    "final_tr": "Demet içindeki tüm elemanların veri türlerinin aynı olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Demet içindeki tüm elemanların veri türlerinin aynı olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "223": {
+    "status": "approved",
+    "final_tr": "Sıralı bir dizi, dizinin uzunluğu (n) ve bir eleman alıp, bu elemanın söz konusu sıralı dizideki \"çoğunluk elemanı\" olup olmadığını döndüren bir fonksiyon yazın. (Çoğunluk elemanı, n/2 defadan fazla tekrar eden elemandır.)",
+    "draft_tr": "Sıralanmış bir dizi, dizinin uzunluğu (n) ve bir eleman alan ve bu elemanın verilen sıralanmış dizide çoğunluk elemanı olup olmadığını döndüren bir fonksiyon yazın. (Çoğunluk elemanı, n/2 defadan fazla geçen elemandır.)",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:25:54+00:00"
+  },
+  "224": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayıdaki değeri 1 olan bitlerin (set bit) sayısını hesaplayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayıdaki ayarlanmış bitlerin (değeri 1 olan ikili rakamlar) sayısını hesaplayan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:23.277+00:00"
+  },
+  "226": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'de tek indeksli konumlardaki karakterleri kaldıran bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir string'deki tek sayılı indeks değerlerine sahip karakterleri kaldıran bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:23.576+00:00"
+  },
+  "227": {
+    "status": "approved",
+    "final_tr": "Üç sayının en küçüğünü bulan bir fonksiyon yazın.",
+    "draft_tr": "Üç sayının en küçüğünü bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "228": {
+    "status": "approved",
+    "final_tr": "Verilen aralıktaki tüm bitlerin 0 (unset) olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen aralıkta tüm bitlerin ayarlanmamış olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:23.883+00:00"
+  },
+  "229": {
+    "status": "approved",
+    "final_tr": "Bir dizi ve bir n tam sayısı alan; verilen dizinin ilk n elemanını, tüm negatif elemanlar pozitiflerden önce gelecek ve negatif ile pozitif elemanların kendi aralarındaki göreli sıraları korunacak şekilde yeniden düzenleyen bir fonksiyon yazın.",
+    "draft_tr": "Bir dizi ve bir tam sayı n alan ve verilen dizinin ilk n elemanını, tüm negatif elemanlar pozitif elemanlardan önce gelecek şekilde yeniden sıralayan, ancak negatif ve pozitif elemanlar arasındaki göreceli sıralamanın korunmasını sağlayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:26:34+00:00"
+  },
+  "230": {
+    "status": "approved",
+    "final_tr": "Bir string ve bir karakter alan, string'deki boşlukları bu karakterle değiştiren ve string'i geri döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir string ve bir karakter alan, string'deki boşlukları bu karakterle değiştiren ve string'i geri döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "232": {
+    "status": "approved",
+    "final_tr": "Bir liste ve bir n tam sayısı alan ve listedeki en büyük n elemanı içeren bir liste döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir liste ve bir tam sayı n alan ve listeden en büyük n öğeyi içeren bir liste döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:24.169+00:00"
+  },
+  "233": {
+    "status": "approved",
+    "final_tr": "Bir silindirin yan yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir silindirin yan yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "234": {
+    "status": "approved",
+    "final_tr": "Kenar uzunluğu verilen bir küpün hacmini hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Kenar uzunluğu verilen bir küpün hacmini hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "235": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının tüm çift konumlu bitlerini ayarlayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayının tüm çift bitlerini ayarlamak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:26:50+00:00"
+  },
+  "237": {
+    "status": "approved",
+    "final_tr": "Bir demet listesi alan ve her bir benzersiz demeti, listede kaç kez geçtiğini belirten bir sayıya eşleyen bir sözlük döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir demet listesi alan ve her bir benzersiz demet'i listede kaç kez geçtiğini gösteren bir sözlük döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:09+00:00"
+  },
+  "238": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'in boş olmayan alt string'lerinin sayısını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir string'in boş olmayan alt dizgelerinin sayısını sayan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:25.133+00:00"
+  },
+  "239": {
+    "status": "approved",
+    "final_tr": "m ve n pozitif tam sayılarını girdi olarak alan ve şu koşulları sağlayan n uzunluğundaki olası dizilerin sayısını bulan bir fonksiyon yazın: Dizinin her bir elemanı pozitif bir tam sayı olmalı; ayrıca bir önceki elemanın iki katına eşit veya ondan büyük, ancak m'ye eşit veya ondan küçük olmalıdır.",
+    "draft_tr": "Pozitif tam sayılar m ve n alan ve her elemanının pozitif bir tam sayı olduğu, bir önceki elemanın iki katından büyük veya ona eşit, ancak m'den küçük veya ona eşit olan n uzunluğundaki olası dizilerin sayısını bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:20+00:00"
+  },
+  "240": {
+    "status": "approved",
+    "final_tr": "İki liste alan ve ilk listenin son elemanını ikinci listenin elemanlarıyla değiştiren bir fonksiyon yazın.",
+    "draft_tr": "İki liste alan ve ilk listenin son elemanını ikinci listenin elemanlarıyla değiştiren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "242": {
+    "status": "approved",
+    "final_tr": "Bir string'deki toplam karakter sayısını sayan bir fonksiyon yazın.",
+    "draft_tr": "Bir string'deki toplam karakter sayısını sayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "244": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayıdan büyük olan bir sonraki mükemmel kareyi bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayıdan büyük olan bir sonraki mükemmel kareyi bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:22+00:00"
+  },
+  "245": {
+    "status": "approved",
+    "final_tr": "Bir dizi alan ve bu dizi için bitonik bir alt dizinin (önce artan, sonra azalan bir dizi) maksimum toplamını bulan bir fonksiyon yazın.",
+    "draft_tr": "Bir dizi alan ve verilen dizi için bitonik alt dizinin maksimum toplamını bulan bir fonksiyon yazın; burada bir dizi, önce artan sonra azalan bir eğilim gösteriyorsa bitonik olarak tanımlanır.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:28+00:00"
+  },
+  "246": {
+    "status": "approved",
+    "final_tr": "Babil yöntemini kullanarak karekök hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Babil yöntemini kullanarak karekök hesaplamaya yarayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:25.639+00:00"
+  },
+  "247": {
+    "status": "approved",
+    "final_tr": "Verilen bir dizideki en uzun palindromik alt dizinin uzunluğunu bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen string'deki en uzun palindromik alt dizinin uzunluğunu bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:35+00:00"
+  },
+  "248": {
+    "status": "approved",
+    "final_tr": "Bir n tam sayısı alan ve n-1'in harmonik toplamını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir tam sayı n alan ve n-1'in harmonik toplamını hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:26.153+00:00"
+  },
+  "249": {
+    "status": "approved",
+    "final_tr": "İki dizinin kesişim kümesini bulan bir fonksiyon yazın.",
+    "draft_tr": "İki dizinin kesişim kümesini bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "250": {
+    "status": "approved",
+    "final_tr": "Bir demet (tuple) ve bir eleman alıp, o elemanın demet içinde kaç kez geçtiğini sayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir demet ve bir eleman alan ve bu elemanın demet içindeki tekrar sayısını sayan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:41+00:00"
+  },
+  "251": {
+    "status": "approved",
+    "final_tr": "Bir liste ve bir eleman alan; elemanı listedeki her bir elemanın önüne yerleştiren ve ortaya çıkan listeyi döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir liste ve bir eleman alan, bu elemanı listedeki her elemanın önüne ekleyen ve sonuçtaki listeyi döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:49+00:00"
+  },
+  "252": {
+    "status": "approved",
+    "final_tr": "Karmaşık sayıları kutupsal koordinatlara dönüştüren bir Python fonksiyonu yazın.",
+    "draft_tr": "Karmaşık sayıları kutupsal koordinatlara dönüştürmek için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:27:56+00:00"
+  },
+  "253": {
+    "status": "approved",
+    "final_tr": "Verilen bir listede bulunan tam sayı elemanlarının sayısını döndüren bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir listede bulunan tam sayı elemanlarının sayısını döndüren bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "255": {
+    "status": "approved",
+    "final_tr": "Bir liste ve n uzunluğunu alan, listenin elemanlarının tüm kombinasyonlarını (tekrarlı olarak) üreten ve her kombinasyon için bir demet içeren bir liste döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir liste ve n uzunluğunu alan, listenin elemanlarının tüm kombinasyonlarını (tekrarlı olarak) üreten ve her kombinasyon için bir demet içeren bir liste döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "256": {
+    "status": "approved",
+    "final_tr": "Negatif olmayan bir sayı alan ve verilen negatif olmayan sayıdan küçük olan asal sayıların sayısını döndüren bir Python fonksiyonu yazın.",
+    "draft_tr": "Negatif olmayan bir sayı alan ve verilen negatif olmayan sayıdan küçük olan asal sayıların sayısını döndüren bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "257": {
+    "status": "approved",
+    "final_tr": "İki sayı alan ve ikinci sayıyı, ardından da birinci sayıyı içeren bir demet döndüren bir fonksiyon yazın.",
+    "draft_tr": "İki sayı alan ve ikinci sayıyı, ardından da birinci sayıyı içeren bir demet döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "259": {
+    "status": "approved",
+    "final_tr": "Verilen iki demeti maksimize eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen iki demeti en üst düzeye çıkaracak bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:26.739+00:00"
+  },
+  "260": {
+    "status": "approved",
+    "final_tr": "n'inci Newman–Shanks–Williams asal sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci Newman–Shanks–Williams asal sayısını bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.028+00:00"
+  },
+  "261": {
+    "status": "approved",
+    "final_tr": "İki demet (tuple) alan ve bu demetler üzerinde eleman bazında matematiksel bölme işlemi gerçekleştiren bir fonksiyon yazın.",
+    "draft_tr": "İki demet alan ve verilen demetler üzerinde eleman bazında matematiksel bölme işlemi gerçekleştiren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:28:03+00:00"
+  },
+  "262": {
+    "status": "approved",
+    "final_tr": "Bir liste ve bir L tam sayısı alan, listeyi ilk parçanın uzunluğu L olacak şekilde ikiye bölen ve ortaya çıkan listeleri bir demet içinde döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir liste ve bir tam sayı L alan, verilen listeyi ilk kısmının uzunluğu L olacak şekilde ikiye bölen ve sonuçtaki listeleri bir demet içinde döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:27.881+00:00"
+  },
+  "264": {
+    "status": "approved",
+    "final_tr": "Bir köpeğin yaşını köpek yılı cinsinden hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir köpeğin yaşını köpek yaşına göre hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:28.499+00:00"
+  },
+  "265": {
+    "status": "approved",
+    "final_tr": "Bir liste ve bir n tam sayısı alan, listeyi her n'inci elemana göre bölen ve ortaya çıkan listelerden oluşan bir liste döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir liste ve bir tam sayı n alan ve listeyi her n'inci eleman için bölerek, ortaya çıkan listelerin bir listesini döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:29.268+00:00"
+  },
+  "266": {
+    "status": "approved",
+    "final_tr": "Kenar uzunluğu verilen bir küpün yan yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Kenar uzunluğu verilen bir küpün yan yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "267": {
+    "status": "approved",
+    "final_tr": "Bir n tam sayısı alan ve ilk n tek doğal sayının karelerinin toplamını döndüren bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir tam sayı n alan ve ilk n tek doğal sayının karelerinin toplamını döndüren bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:29.871+00:00"
+  },
+  "268": {
+    "status": "approved",
+    "final_tr": "n'inci yıldız sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci yıldız sayısını bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:28:25+00:00"
+  },
+  "269": {
+    "status": "approved",
+    "final_tr": "Bir karakterin ASCII değerini bulan bir fonksiyon yazın.",
+    "draft_tr": "Bir karakterin ASCII değerini bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:05+00:00"
+  },
+  "270": {
+    "status": "approved",
+    "final_tr": "Bir listenin çift indisli konumlarında bulunan çift sayıların toplamını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir listenin çift numaralı konumlarındaki çift sayıların toplamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:10+00:00"
+  },
+  "271": {
+    "status": "approved",
+    "final_tr": "Bir n tam sayısı alan ve ilk n çift doğal sayının beşinci kuvvetlerinin toplamını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir tam sayı n alan ve ilk n çift doğal sayının beşinci kuvvetinin toplamını bulan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:30.445+00:00"
+  },
+  "272": {
+    "status": "approved",
+    "final_tr": "Bir demet listesini alan ve her demetin son elemanını içeren bir liste döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir demet listesini alan ve her demetin son elemanını içeren bir liste döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "273": {
+    "status": "approved",
+    "final_tr": "İki demet (tuple) alan ve birinci demetin elemanlarından, ikinci demetin aynı indeksteki elemanlarını çıkaran bir fonksiyon yazın.",
+    "draft_tr": "İki demet alan ve birinci demetteki elemanlardan, ikinci demetteki aynı indekse sahip elemanları çıkaran bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:20+00:00"
+  },
+  "274": {
+    "status": "approved",
+    "final_tr": "Pozitif bir n tam sayısı alan ve çift indeksli binom katsayılarının toplamını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Pozitif bir tam sayı n alan ve çift indeksli binom katsayılarının toplamını bulan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:31.553+00:00"
+  },
+  "276": {
+    "status": "approved",
+    "final_tr": "Bir silindirin yarıçapını ve yüksekliğini alan ve hacmini döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir silindirin yarıçapını ve yüksekliğini alan ve hacmini döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "277": {
+    "status": "approved",
+    "final_tr": "Bir sözlük ve bir n tam sayısı alan ve sözlüğü yalnızca değeri n'den büyük veya n'ye eşit olan girdileri içerecek şekilde filtreleyen bir fonksiyon yazın.",
+    "draft_tr": "Bir sözlük ve tam sayı n alan ve sözlüğü, değeri n'den büyük veya n'ye eşit olan girdileri içerecek şekilde filtreleyen bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:32.193+00:00"
+  },
+  "278": {
+    "status": "approved",
+    "final_tr": "Verilen bir demet (tuple) içindeki belirli bir demet elemanından önce gelen elemanların sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet içinde, demet elemanından önce gelen elemanların sayısını bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:27+00:00"
+  },
+  "279": {
+    "status": "approved",
+    "final_tr": "n. ongen sayıyı bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci ongen sayısını bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:35+00:00"
+  },
+  "280": {
+    "status": "approved",
+    "final_tr": "Bir dizi ve bir eleman alan ve elemanın dizide olup olmadığını belirten bir boole değeri ile elemanın indeks konumunu (veya eleman bulunmazsa -1) içeren bir demet döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir dizi ve bir eleman alan ve elemanın dizide olup olmadığını belirten bir boole değeri ile elemanın indeks konumunu (veya eleman bulunmazsa -1) içeren bir demet döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "281": {
+    "status": "approved",
+    "final_tr": "Verilen bir listenin elemanlarının benzersiz olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir listenin elemanlarının benzersiz olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "282": {
+    "status": "approved",
+    "final_tr": "İki listeyi eleman bazında birbirinden çıkaran bir fonksiyon yazın.",
+    "draft_tr": "İki listeyi eleman bazında çıkaracak bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:41+00:00"
+  },
+  "283": {
+    "status": "approved",
+    "final_tr": "Bir tam sayı alan ve bu tam sayıdaki her bir rakamın sıklığının, o rakamın kendisinden küçük veya ona eşit olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir tam sayı alan ve bu tam sayıdaki her bir rakamın sıklığının, o rakamın kendisinden küçük veya ona eşit olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "284": {
+    "status": "approved",
+    "final_tr": "Bir liste ve bir eleman alan ve listedeki tüm elemanların verilen elemana eşit olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir liste ve bir eleman alan ve listedeki tüm elemanların verilen elemana eşit olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "285": {
+    "status": "approved",
+    "final_tr": "Bir string'in 'a' karakterini ve ardından gelen iki veya üç 'b' karakterini içerip içermediğini kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir string'in 'a' karakterini ve ardından gelen iki veya üç 'b' karakterini içerip içermediğini kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "286": {
+    "status": "approved",
+    "final_tr": "Verilen bir dizinin k kez tekrarlanmasıyla oluşturulan yeni dizideki, bitişik elemanlardan oluşan en büyük toplamı bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen diziyi k kez tekrarlayarak oluşturulan değiştirilmiş dizide, bitişik elemanların en büyük toplamını bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:46+00:00"
+  },
+  "287": {
+    "status": "approved",
+    "final_tr": "Bir n tam sayısı alan ve ilk n çift doğal sayının karelerinin toplamını döndüren bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir tam sayı n alan ve ilk n çift doğal sayının karelerinin toplamını döndüren bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:32.985+00:00"
+  },
+  "290": {
+    "status": "approved",
+    "final_tr": "Bir liste listesi içindeki en uzun listeyi bulan bir fonksiyon yazın.",
+    "draft_tr": "Listeler listesi içindeki en uzun listeyi bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:52+00:00"
+  },
+  "291": {
+    "status": "approved",
+    "final_tr": "n adet direk ve k adet renk içeren bir çit için, yan yana en fazla 2 direğin aynı renkte olacağı şekilde çitin boyanma yollarının sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "n adet direk ve k renk içeren verilen çitin, en fazla 2 bitişik direğin aynı renkte olacağı şekilde boyanabileceği toplam yol sayısını bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:29:59+00:00"
+  },
+  "292": {
+    "status": "approved",
+    "final_tr": "İki sayının bölümünü (en yakın tam sayıya aşağı yuvarlanmış şekilde) bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "İki sayının bölümünü (en yakın tam sayıya yuvarlanmış olarak) bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:06+00:00"
+  },
+  "293": {
+    "status": "approved",
+    "final_tr": "Dik açılı bir üçgenin üçüncü kenarını bulan bir fonksiyon yazın.",
+    "draft_tr": "Bir dik üçgenin üçüncü kenarını bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:11+00:00"
+  },
+  "294": {
+    "status": "approved",
+    "final_tr": "Verilen heterojen bir listede en büyük değeri bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen heterojen bir listede en büyük değeri bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "295": {
+    "status": "approved",
+    "final_tr": "Bir sayının tüm bölenlerinin toplamını döndüren bir fonksiyon yazın.",
+    "draft_tr": "Bir sayının tüm bölenlerinin toplamını döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "296": {
+    "status": "approved",
+    "final_tr": "Bir dizideki tersinimleri (inversions) sayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir dizideki ters sıralamaları saymak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:19+00:00"
+  },
+  "297": {
+    "status": "approved",
+    "final_tr": "Verilen iç içe geçmiş liste yapısını düzleştiren bir fonksiyon yazın.",
+    "draft_tr": "Verilen iç içe geçmiş liste yapısını düzleştirmek için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:25+00:00"
+  },
+  "299": {
+    "status": "approved",
+    "final_tr": "Demet (tuple) listesinden maksimum toplamı hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Demet listesinden maksimum toplam değeri hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:30+00:00"
+  },
+  "300": {
+    "status": "approved",
+    "final_tr": "İlk n bitin toplamı ile son n bitin toplamı eşit olan, uzunluğu 2n olan tüm ikili dizilerin sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "İlk n bitin toplamı ile son n bitin toplamı eşit olan, uzunluğu 2n olan tüm ikili dizilerin sayısını bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "301": {
+    "status": "approved",
+    "final_tr": "Bir sözlüğün derinliğini bulan bir fonksiyon yazın.",
+    "draft_tr": "Bir sözlüğün derinliğini bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:41+00:00"
+  },
+  "304": {
+    "status": "approved",
+    "final_tr": "Belirli sayıda döndürme işleminden sonra, verilen indeksteki elemanı bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Belirli sayıda döndürme işleminden sonra, verilen bir indeksteki elemanı bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:47+00:00"
+  },
+  "305": {
+    "status": "approved",
+    "final_tr": "Bir kelime listesinden 'p' harfiyle başlayan iki kelimeyi döndüren bir fonksiyon yazın.",
+    "draft_tr": "'p' harfiyle başlayan kelimelerden oluşan bir listeden iki kelime döndüren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:33.808+00:00"
+  },
+  "306": {
+    "status": "approved",
+    "final_tr": "Başlangıçtan i. indekse kadar olan kısımda, i'den sonra gelen (yani k > i olan) belirli bir k. elemanı da içeren artan bir alt dizinin maksimum toplamını bulan bir fonksiyon yazın.",
+    "draft_tr": "Önekten i'inci indekse kadar olan artan alt dizinin maksimum toplamını bulmak ve ayrıca i'den sonra gelen, yani k > i olan verilen k'inci elemanı da dahil eden bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:30:58+00:00"
+  },
+  "307": {
+    "status": "approved",
+    "final_tr": "Bir demetin kopyasını (colon) alan bir fonksiyon yazın.",
+    "draft_tr": "Bir demetin iki noktalı parçasını alan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "Kaynak belirsiz: 'get a colon of a tuple' (w3resource ifadesi). Taslaktaki 'iki noktalı parçası' anlamsızdı; test demetin bir kopyasını değiştiriyor, 'kopya' önerildi. Onaylamadan önce karar verin.",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:44:21.541+00:00"
+  },
+  "308": {
+    "status": "approved",
+    "final_tr": "Verilen iki listeden, her listeden bir çarpan seçerek belirtilen sayıda en büyük çarpımları bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen iki listeden, her listeden bir çarpan seçerek belirtilen sayıda en büyük çarpımları bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "309": {
+    "status": "approved",
+    "final_tr": "İki sayının en büyüğünü bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "İki sayının en büyük değerini bulan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:31:08+00:00"
+  },
+  "310": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'i karakterlerden oluşan bir demete dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir string'i karakterlerden oluşan bir demet'e dönüştürecek bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:34.110+00:00"
+  },
+  "311": {
+    "status": "approved",
+    "final_tr": "En soldaki ayarlanmamış biti ayarlayan bir Python fonksiyonu yazın.",
+    "draft_tr": "En soldaki ayarlanmamış biti ayarlamak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:31:18+00:00"
+  },
+  "312": {
+    "status": "approved",
+    "final_tr": "Bir koninin hacmini hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir koninin hacmini hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "388": {
+    "status": "approved",
+    "final_tr": "n'ye eşit veya n'den küçük olan en büyük 2'nin kuvvetini bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "n'den küçük veya n'e eşit olan en büyük 2'nin kuvvetini bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:09+00:00"
+  },
+  "389": {
+    "status": "approved",
+    "final_tr": "n'inci Lucas sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "n'inci Lucas sayısını bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "390": {
+    "status": "approved",
+    "final_tr": "Verilen bir biçim string'ini bir listedeki tüm elemanlara uygulamak için bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir biçim string'ini bir listedeki tüm elemanlara uygulamak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:12+00:00"
+  },
+  "391": {
+    "status": "approved",
+    "final_tr": "Birden fazla listeyi iç içe geçmiş sözlüğe dönüştürmek için bir fonksiyon yazın.",
+    "draft_tr": "Birden fazla listeyi iç içe geçmiş sözlüğe dönüştürmek için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:12+00:00"
+  },
+  "392": {
+    "status": "approved",
+    "final_tr": "Verilen f(n) = max((f(n/2) + f(n/3) + f(n/4) + f(n/5)), n) denklemini kullanarak elde edilebilecek en büyük toplamı bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen f(n) = max((f(n/2) + f(n/3) + f(n/4) + f(n/5)), n) denklemini kullanarak elde edilebilecek en büyük toplamı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "393": {
+    "status": "approved",
+    "final_tr": "En uzun listeyi bulan bir fonksiyon yazın.",
+    "draft_tr": "En uzun listeyi bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:17+00:00"
+  },
+  "394": {
+    "status": "approved",
+    "final_tr": "Verilen demetin yinelenen eleman içermediğini kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet'te yinelenen eleman olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:34.423+00:00"
+  },
+  "395": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'teki ilk tekrarlanmayan karakteri bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir string'teki ilk tekrarlanmayan karakteri bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:19+00:00"
+  },
+  "396": {
+    "status": "approved",
+    "final_tr": "Verilen string'in aynı karakterle başlayıp bitip bitmediğini kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen string'in aynı karakterle başlayıp bitip bitmediğini kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "397": {
+    "status": "approved",
+    "final_tr": "Üç sayının medyanını bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Üç sayının medyanını bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:19+00:00"
+  },
+  "398": {
+    "status": "approved",
+    "final_tr": "Verilen bir listedeki her sayının rakamları toplamını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir listede her sayının rakamlarının toplamını hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:34.852+00:00"
+  },
+  "399": {
+    "status": "approved",
+    "final_tr": "Verilen demetler arasında bit düzeyinde xor işlemi uygulayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demetler üzerinde bitwise xor matematiksel işlemini gerçekleştirecek bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:35.156+00:00"
+  },
+  "400": {
+    "status": "approved",
+    "final_tr": "Verilen listedeki benzersiz demetlerin sayısını bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen listede bulunan benzersiz demetlerin sayısını çıkaran bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:35.346+00:00"
+  },
+  "401": {
+    "status": "approved",
+    "final_tr": "Verilen iki iç içe geçmiş demet (tuple) içindeki elemanları indis bazlı olarak toplayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen iki iç içe demetteki demet elemanlarını indeks bazında toplama işlemini gerçekleştiren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:26+00:00"
+  },
+  "404": {
+    "status": "approved",
+    "final_tr": "İki sayının en küçüğünü bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "İki sayının en küçüğünü bulan bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:34+00:00"
+  },
+  "405": {
+    "status": "approved",
+    "final_tr": "Bir demet içinde bir elemanın bulunup bulunmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir demet içinde bir elemanın bulunup bulunmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.029+00:00"
+  },
+  "406": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının paritesinin tek olup olmadığını belirleyen bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayının parite değerinin tek olup olmadığını belirleyen bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:35.544+00:00"
+  },
+  "407": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının rakamlarını yeniden düzenleyerek bir sonraki daha büyük sayıyı oluşturan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir sayının rakamlarını yeniden düzenleyerek bir sonraki daha büyük sayıyı oluşturan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "408": {
+    "status": "approved",
+    "final_tr": "Birinci diziden bir eleman ve ikinci diziden bir elemandan oluşan en küçük k çifti bulan bir fonksiyon yazın.",
+    "draft_tr": "İlk diziden bir eleman ve ikinci diziden bir elemandan oluşan en küçük k çiftini bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:36.585+00:00"
+  },
+  "409": {
+    "status": "approved",
+    "final_tr": "Verilen bir liste içindeki demet çiftlerinden en küçük çarpımı bulacak bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir liste içindeki demet çiftlerinden en küçük çarpımı bulacak bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "410": {
+    "status": "approved",
+    "final_tr": "Verilen heterojen bir listede en küçük değeri bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen heterojen bir listede en küçük değeri bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "411": {
+    "status": "approved",
+    "final_tr": "Verilen snake case string'ini camel case string'ine dönüştürecek bir fonksiyon yazın.",
+    "draft_tr": "Verilen snake case string'ini camel case string'ine dönüştürecek bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "412": {
+    "status": "approved",
+    "final_tr": "Verilen bir listeden tek sayıları kaldırmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir listeden tek sayıları kaldırmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:35+00:00"
+  },
+  "413": {
+    "status": "approved",
+    "final_tr": "Verilen bir demet (tuple) listesinden n. elemanı çıkaran bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir demet listesinden n'inci elemanı çıkarmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:41+00:00"
+  },
+  "414": {
+    "status": "approved",
+    "final_tr": "Bir dizideki herhangi bir değerin başka bir dizide mevcut olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir dizideki herhangi bir değerin başka bir dizide mevcut olup olmadığını kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "415": {
+    "status": "approved",
+    "final_tr": "Verilen bir tam sayı dizisinden, çarpımı en yüksek olan ikiliyi bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir tam sayı dizisinden çarpımı en büyük olan çifti bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "[Claude düzeltti; önceki onaylı metin: Verilen bir tamsayı dizisinden, çarpımı en yüksek olan ikiliyi bulan bir Python fonksiyonu yazın.]",
+    "updated_at": "2026-09-16T16:37:39.030+00:00",
+    "reviewer": "human+claude"
+  },
+  "417": {
+    "status": "approved",
+    "final_tr": "Verilen demet (tuple) listesindeki ortak ilk elemanı bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet listesindeki ortak ilk elemanı bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:51+00:00"
+  },
+  "418": {
+    "status": "approved",
+    "final_tr": "Bir listede en uzun uzunluğa sahip elemanı bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir listede en uzun uzunluğa sahip elemanı bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:52+00:00"
+  },
+  "419": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayı listesindeki her sayıyı yuvarlayan ve toplamın listenin uzunluğuyla çarpımını yazdıran bir fonksiyon yazın.",
+    "draft_tr": "Verilen sayı listesindeki her sayıyı yuvarlayan ve listenin uzunluğuyla çarpılan toplamı yazdıran bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:36.798+00:00"
+  },
+  "420": {
+    "status": "approved",
+    "final_tr": "İlk n çift doğal sayının küp toplamını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "İlk n çift doğal sayının küp toplamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:53+00:00"
+  },
+  "421": {
+    "status": "approved",
+    "final_tr": "Demetin her bir elemanını ayırıcıyla birleştiren bir fonksiyon yazın.",
+    "draft_tr": "Demetin her bir elemanını ayırıcı ile birleştirecek bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:37.291+00:00"
+  },
+  "422": {
+    "status": "approved",
+    "final_tr": "İlk n doğal sayının küplerinin ortalamasını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "İlk n doğal sayının küplerinin ortalamasını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:53+00:00"
+  },
+  "424": {
+    "status": "approved",
+    "final_tr": "Verilen demetteki her bir string'in yalnızca son karakterini ayıklayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet içindeki her bir string'in yalnızca en sondaki elemanını ayıklayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:37.463+00:00"
+  },
+  "425": {
+    "status": "approved",
+    "final_tr": "Belirli bir elemanı içeren alt listelerin sayısını sayan bir fonksiyon yazın.",
+    "draft_tr": "Belirli bir elemanı içeren alt listelerin sayısını sayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "426": {
+    "status": "approved",
+    "final_tr": "Tek sayıları filtrelemek için bir fonksiyon yazın.",
+    "draft_tr": "Tek sayıları filtrelemek için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:32:54+00:00"
+  },
+  "427": {
+    "status": "approved",
+    "final_tr": "yyyy-aa-gg biçimindeki bir tarihi gg-aa-yyyy biçimine dönüştüren bir fonksiyon yazın.",
+    "draft_tr": "yyyy-aa-gg biçimindeki bir tarihi dd-aa-yyyy biçimine dönüştürecek bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:37.687+00:00"
+  },
+  "428": {
+    "status": "approved",
+    "final_tr": "Shell sıralama yöntemini kullanarak verilen diziyi sıralayacak bir fonksiyon yazın.",
+    "draft_tr": "Shell sıralama yöntemini kullanarak verilen diziyi sıralayacak bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "429": {
+    "status": "approved",
+    "final_tr": "Verilen iki demetten, eleman bazlı olarak ve demetler halinde ayıklama yapan bir fonksiyon yazın.",
+    "draft_tr": "Verilen iki demetten eleman bazında değerleri ve demetleri ayıklayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:00+00:00"
+  },
+  "430": {
+    "status": "approved",
+    "final_tr": "Bir parabolün doğrultmanını bulan bir fonksiyon yazın.",
+    "draft_tr": "Bir parabolün yön çizgisini bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:08+00:00"
+  },
+  "431": {
+    "status": "approved",
+    "final_tr": "İki liste alan ve bu listelerde en az bir ortak eleman varsa true değerini döndüren bir fonksiyon yazın.",
+    "draft_tr": "İki liste alan ve bu listelerde en az bir ortak eleman varsa true değerini döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "432": {
+    "status": "approved",
+    "final_tr": "Bir yamuğun orta taban (medyan) uzunluğunu bulan bir fonksiyon yazın.",
+    "draft_tr": "Bir yamuğun medyan uzunluğunu bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:37.883+00:00"
+  },
+  "433": {
+    "status": "approved",
+    "final_tr": "Girilen sayının, verilen dizinin elemanlarından büyük olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Girilen sayının, verilen dizinin elemanlarından büyük olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "434": {
+    "status": "approved",
+    "final_tr": "\"a\" harfinin ardından bir veya daha fazla \"b\" harfi gelen bir string'i eşleştiren bir fonksiyon yazın.",
+    "draft_tr": "\"a\" harfinin ardından bir veya daha fazla \"b\" harfi gelen bir string'i eşleştiren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "435": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının son basamağını bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayının son rakamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:17+00:00"
+  },
+  "436": {
+    "status": "approved",
+    "final_tr": "Bir listedeki negatif sayıları döndüren bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir listedeki negatif sayıları döndüren bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "437": {
+    "status": "approved",
+    "final_tr": "Bir metin dizisindeki tek sayılı konumda bulunan karakterleri kaldıran bir fonksiyon yazın.",
+    "draft_tr": "Bir string'deki tek sayılı karakterleri kaldıran bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:22+00:00"
+  },
+  "438": {
+    "status": "approved",
+    "final_tr": "İki yönlü demet çiftlerini sayan bir fonksiyon yazın.",
+    "draft_tr": "İki yönlü demet çiftlerini sayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "439": {
+    "status": "approved",
+    "final_tr": "Birden fazla tam sayıdan oluşan bir listeyi tek bir tam sayıya birleştirecek bir fonksiyon yazın.",
+    "draft_tr": "Birden fazla tam sayıdan oluşan bir listeyi tek bir tam sayıya birleştirecek bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "440": {
+    "status": "approved",
+    "final_tr": "Verilen bir cümlede ilk zarfı ve konumlarını bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir cümlede ilk zarfı ve konumlarını bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:24+00:00"
+  },
+  "441": {
+    "status": "approved",
+    "final_tr": "Belirtilen boyuttaki bir küpün yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Belirtilen boyutlardaki bir küpün yüzey alanını hesaplayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:38.090+00:00"
+  },
+  "442": {
+    "status": "approved",
+    "final_tr": "Bir tam sayı dizisindeki pozitif sayıların oranını bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Bir tam sayı dizisindeki pozitif sayıların oranını bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:25+00:00"
+  },
+  "443": {
+    "status": "approved",
+    "final_tr": "Verilen listeden en büyük negatif sayıyı bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen listeden en büyük negatif sayıyı bulan bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "444": {
+    "status": "approved",
+    "final_tr": "Verilen demet listesindeki her bir demeti k kadar kırpan bir fonksiyon yazın.",
+    "draft_tr": "Verilen tuple listesindeki her bir demeti k kadar kırpmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "[Claude düzeltti; önceki onaylı metin: Verilen tuple listesindeki her bir demeti k kadar kırpmak için bir fonksiyon yazın.]",
+    "updated_at": "2026-09-16T16:37:39.030+00:00",
+    "reviewer": "human+claude"
+  },
+  "445": {
+    "status": "approved",
+    "final_tr": "Verilen iki demetteki elemanların indeks bazında çarpımını gerçekleştirecek bir fonksiyon yazın.",
+    "draft_tr": "Verilen iki demetteki elemanların indeks bazında çarpımını gerçekleştirecek bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "446": {
+    "status": "approved",
+    "final_tr": "Bir listedeki tüm elemanların bir demet içinde kaç kez geçtiğini sayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir listede yer alan tüm elemanların bir demet'te kaç kez geçtiğini sayan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "[Claude düzeltti; önceki onaylı metin: Bir listedeki tüm elemanların bir demet (tuple) içindeki geçiş sayılarını hesaplayan bir Python fonksiyonu yazın.]",
+    "updated_at": "2026-09-16T16:37:39.030+00:00",
+    "reviewer": "human+claude"
+  },
+  "447": {
+    "status": "approved",
+    "final_tr": "Bir listedeki tek tek elemanların küplerini bulmak için bir fonksiyon yazın.",
+    "draft_tr": "Bir listedeki tek tek elemanların küplerini bulmak için bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:37+00:00"
+  },
+  "448": {
+    "status": "approved",
+    "final_tr": "Perrin sayılarının toplamını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Perrin sayılarının toplamını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "450": {
+    "status": "approved",
+    "final_tr": "Verilen bir string değerleri listesinden belirtilen uzunluktaki string'leri ayıklayan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir string değerleri listesinden belirtilen boyutta string'leri ayıklayan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:38.311+00:00"
+  },
+  "451": {
+    "status": "approved",
+    "final_tr": "Verilen string'deki tüm boşlukları kaldıran bir fonksiyon yazın.",
+    "draft_tr": "Verilen string'deki tüm boşlukları kaldıran bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "452": {
+    "status": "approved",
+    "final_tr": "Verilen tutarda zarar varsa satıştaki zarar tutarını veren, aksi takdirde 0 değerini döndüren bir fonksiyon yazın.",
+    "draft_tr": "Verilen tutarda zarar varsa satıştaki zarar tutarını veren, aksi takdirde 0 değerini döndüren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "453": {
+    "status": "approved",
+    "final_tr": "Bir sayının çift çarpanlarının toplamını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Bir sayının çift çarpanlarının toplamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:38+00:00"
+  },
+  "454": {
+    "status": "approved",
+    "final_tr": "'z' harfini içeren bir kelimeyi eşleştiren bir fonksiyon yazın.",
+    "draft_tr": "'z' harfini içeren bir kelimeyi eşleştiren bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "455": {
+    "status": "approved",
+    "final_tr": "Verilen ay numarasının 31 gün içerip içermediğini kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Verilen ay numarasının 31 gün içerip içermediğini kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "456": {
+    "status": "approved",
+    "final_tr": "Verilen bir string listesindeki her bir string'i tersine çeviren bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir dize değerleri listesindeki her bir string'i tersine çeviren bir fonksiyon yazın.",
+    "edited": true,
+    "note": "[Claude düzeltti; önceki onaylı metin: Verilen bir dize değerleri listesindeki her bir string'i tersine çeviren bir fonksiyon yazın.]",
+    "updated_at": "2026-09-16T16:37:39.030+00:00",
+    "reviewer": "human+claude"
+  },
+  "457": {
+    "status": "approved",
+    "final_tr": "En kısa uzunluğa sahip alt listeyi bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "En kısa uzunluğa sahip alt listeyi bulan bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:50+00:00"
+  },
+  "458": {
+    "status": "approved",
+    "final_tr": "Bir dikdörtgenin alanını hesaplayan bir fonksiyon yazın.",
+    "draft_tr": "Bir dikdörtgenin alanını hesaplayan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "459": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'den büyük harfli alt string'leri kaldıran bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir string'den büyük harfli alt dizeleri kaldırmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "[Claude düzeltti; önceki onaylı metin: Verilen bir string'den büyük harfli alt dizeleri kaldırmak için bir fonksiyon yazın.]",
+    "updated_at": "2026-09-16T16:37:39.030+00:00",
+    "reviewer": "human+claude"
+  },
+  "460": {
+    "status": "approved",
+    "final_tr": "Her alt listenin ilk elemanını alan bir Python fonksiyonu yazın.",
+    "draft_tr": "Her alt listenin ilk elemanını alan bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "461": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'deki büyük harfleri sayan bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir string'teki büyük harfleri sayan bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:38.511+00:00"
+  },
+  "462": {
+    "status": "approved",
+    "final_tr": "Verilen bir listenin elemanlarının tüm olası kombinasyonlarını bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir listenin elemanlarının tüm olası kombinasyonlarını bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "463": {
+    "status": "approved",
+    "final_tr": "Verilen dizideki, elemanlarının çarpımı en büyük olan alt diziyi bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen dizideki en büyük çarpım alt dizisini bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:33:58+00:00"
+  },
+  "464": {
+    "status": "approved",
+    "final_tr": "Bir sözlükteki tüm değerlerin aynı olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "draft_tr": "Bir sözlükteki tüm değerlerin aynı olup olmadığını kontrol eden bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "465": {
+    "status": "approved",
+    "final_tr": "Verilen bir sözlükten boş öğeleri kaldıran bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir sözlükten boş öğeleri kaldıran bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "468": {
+    "status": "approved",
+    "final_tr": "Bu dizinin artan bir alt dizisindeki sayıları çarparak elde edilen en büyük çarpımı bulan bir fonksiyon yazın.",
+    "draft_tr": "Bu dizinin artan bir alt dizisindeki sayıları çarparak elde edilen en büyük çarpımı bulan bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "470": {
+    "status": "approved",
+    "final_tr": "Verilen demetin komşu elemanlarının ikili toplamlarını bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demetin komşu elemanlarının ikili toplamını bulmak için bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:34:04+00:00"
+  },
+  "471": {
+    "status": "approved",
+    "final_tr": "Bir dizinin elemanlarının çarpımının n moduna göre sonucunu bulan bir Python fonksiyonu yazın.",
+    "draft_tr": "Dizilerin çarpımının n modülündeki sonucunu bulmak için bir Python fonksiyonu yazın.",
+    "edited": true,
+    "note": "",
+    "updated_at": "2026-09-16T14:34:11+00:00"
+  },
+  "472": {
+    "status": "approved",
+    "final_tr": "Verilen listenin ardışık sayılar içerip içermediğini kontrol eden bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen listenin ardışık sayılar içerip içermediğini kontrol eden bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "473": {
+    "status": "approved",
+    "final_tr": "Verilen demet listesinde, elemanların sırasına bakmaksızın demetlerin kesişimini bulan bir fonksiyon yazın.",
+    "draft_tr": "Verilen demet listesindeki elemanların sırasına bakılmaksızın kesişim kümesini bulan bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:38.709+00:00"
+  },
+  "474": {
+    "status": "approved",
+    "final_tr": "Bir string'deki karakterleri değiştirecek bir fonksiyon yazın.",
+    "draft_tr": "Bir string'deki karakterleri değiştirecek bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "475": {
+    "status": "approved",
+    "final_tr": "Bir sözlüğü değere göre sıralayacak bir fonksiyon yazın.",
+    "draft_tr": "Bir sözlüğü değere göre sıralayacak bir fonksiyon yazın.",
+    "edited": false,
+    "note": "",
+    "reviewer": "claude",
+    "updated_at": "2026-09-16T16:37:39.030+00:00"
+  },
+  "476": {
+    "status": "approved",
+    "final_tr": "Verilen bir dizideki en büyük ve en küçük değerlerin toplamını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir dizideki en büyük ve en küçük değerlerin toplamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:34:12+00:00"
+  },
+  "477": {
+    "status": "approved",
+    "final_tr": "Verilen string'i küçük harfe dönüştürmek için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen string'i küçük harfe dönüştürmek için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:34:12+00:00"
+  },
+  "478": {
+    "status": "approved",
+    "final_tr": "Verilen bir string'den küçük harfli alt string'leri kaldıran bir fonksiyon yazın.",
+    "draft_tr": "Verilen bir string'den küçük harfli alt dizeleri kaldıran bir fonksiyon yazın.",
+    "edited": true,
+    "note": "",
+    "reviewer": "human",
+    "updated_at": "2026-09-16T16:43:39.671+00:00"
+  },
+  "479": {
+    "status": "approved",
+    "final_tr": "Verilen bir sayının ilk rakamını bulmak için bir Python fonksiyonu yazın.",
+    "draft_tr": "Verilen bir sayının ilk rakamını bulmak için bir Python fonksiyonu yazın.",
+    "edited": false,
+    "note": "",
+    "updated_at": "2026-09-16T14:34:12+00:00"
+  }
+}

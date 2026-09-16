@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBPP-TR İnceleme</title>
+<style>
+  :root {
+    --bg: #f6f6f4; --panel: #ffffff; --text: #1d1d1b; --muted: #6b6b66; --border: #deddd8;
+    --accent: #2f6f4f; --accent-text: #ffffff; --warn-bg: #fff4d6; --warn-text: #6b4e00;
+    --problem: #a8322d; --problem-bg: #fbe5e3; --ok-bg: #e2f1e8; --code-bg: #f0efeb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161615; --panel: #20201e; --text: #e8e7e3; --muted: #9a9993; --border: #34342f;
+      --accent: #5fae84; --accent-text: #0e1a13; --warn-bg: #3a3118; --warn-text: #f0d68a;
+      --problem: #ec8a82; --problem-bg: #3b1f1d; --ok-bg: #1d3327; --code-bg: #191918;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { position: sticky; top: 0; z-index: 1; background: var(--panel); border-bottom: 1px solid var(--border);
+           padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  header .file { font-weight: 600; }
+  header .muted { color: var(--muted); font-size: 13px; }
+  .progress { flex: 1 1 200px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; min-width: 120px; }
+  .progress > div { height: 100%; background: var(--accent); width: 0; transition: width .2s; }
+  select, button, textarea, input { font: inherit; color: inherit; }
+  select { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; }
+  main { max-width: 920px; margin: 0 auto; padding: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .row-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .badge { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: var(--code-bg); color: var(--muted); }
+  .badge.approved { background: var(--ok-bg); color: var(--accent); }
+  .badge.problem { background: var(--problem-bg); color: var(--problem); }
+  .label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 14px 0 4px; }
+  .en { font-size: 17px; }
+  textarea { width: 100%; min-height: 84px; resize: vertical; font-size: 17px; line-height: 1.5;
+             background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+  textarea:focus, input:focus, select:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .draft-diff { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .draft-diff button { background: none; border: none; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; }
+  ul.warnings { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; }
+  ul.warnings li { background: var(--warn-bg); color: var(--warn-text); border-radius: 6px; padding: 5px 10px; font-size: 14px; }
+  ul.warnings li.review { background: var(--problem-bg); color: var(--problem); }
+  .back { color: var(--muted); font-style: italic; }
+  details { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+  summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+  pre { background: var(--code-bg); border-radius: 8px; padding: 10px 12px; overflow-x: auto; font-size: 13px; margin: 8px 0 0; }
+  input.note { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; align-items: center; }
+  .actions .spacer { flex: 1; }
+  button.btn { border: 1px solid var(--border); background: var(--panel); border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+  button.btn:hover { border-color: var(--muted); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+  button.danger { color: var(--problem); }
+  kbd { font: 11px ui-monospace, monospace; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; margin-left: 4px; opacity: .8; }
+  .empty { text-align: center; color: var(--muted); padding: 48px 16px; }
+  .toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg);
+           padding: 6px 14px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: .92; }
+  .help { color: var(--muted); font-size: 13px; margin-top: 12px; text-align: center; }
+  @media (max-width: 600px) { .actions .spacer { display: none; } button.btn { flex: 1 1 auto; } }
+</style>
+</head>
+<body>
+<header>
+  <label class="muted">Dosya
+    <select id="fileSelect" aria-label="İncelenen dosya"></select>
+  </label>
+  <span class="muted" id="counts"></span>
+  <div class="progress" aria-hidden="true"><div id="bar"></div></div>
+  <label class="muted">Göster
+    <select id="filter">
+      <option value="pending">Tüm bekleyenler</option>
+      <option value="warned">Otomatik uyarılı bekleyenler</option>
+      <option value="problem">Sorunlu olarak işaretlenenler</option>
+      <option value="approved">Onaylı</option>
+      <option value="claude_edited">Claude'un düzeltip onayladıkları</option>
+      <option value="claude">Claude'un onayladıkları (tümü)</option>
+      <option value="all">Tümü</option>
+    </select>
+  </label>
+  <span class="muted" id="position"></span>
+</header>
+
+<main>
+  <div id="view"></div>
+  <p class="help">
+    <kbd>Ctrl</kbd>+<kbd>Enter</kbd> onayla ve ilerle ·
+    <kbd>Alt</kbd>+<kbd>←</kbd>/<kbd>→</kbd> önceki/sonraki ·
+    <kbd>Alt</kbd>+<kbd>S</kbd> sorunlu işaretle
+  </p>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const state = { file: null, files: [], items: [], decisions: {}, filter: "pending", list: [], index: 0, edits: {}, notes: {} };
+const $ = (id) => document.getElementById(id);
+
+// Araç ağa açıkken sunucu token ister; token sayfa adresinden okunup her isteğe eklenir
+const TOKEN = new URLSearchParams(location.search).get("token");
+
+async function api(path, body) {
+  const headers = { "Content-Type": "application/json" };
+  if (TOKEN) headers["X-Review-Token"] = TOKEN;
+  const res = await fetch(path, body === undefined
+    ? { headers }
+    : { method: "POST", headers, body: JSON.stringify(body) });
+  return res;
+}
+
+function store(key, value) {
+  try { localStorage.setItem(key, value); } catch {}
+}
+function recall(key) {
+  try { return localStorage.getItem(key); } catch { return null; }
+}
+
+function hasUnsavedEdits() {
+  return Object.entries(state.edits).some(([id, text]) => {
+    const it = state.items.find((x) => String(x.task_id) === id);
+    const d = state.decisions[id];
+    return it && text.trim() !== (d ? d.final_tr : it.draft_tr);
+  });
+}
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function statusOf(item) {
+  const d = state.decisions[item.task_id];
+  return d ? d.status : "pending";
+}
+
+function currentText(item) {
+  if (item.task_id in state.edits) return state.edits[item.task_id];
+  const d = state.decisions[item.task_id];
+  return d ? d.final_tr : item.draft_tr;
+}
+
+function matches(item, filter) {
+  const st = statusOf(item);
+  if (filter === "all") return true;
+  if (filter === "warned") return st === "pending" && (item.warnings.length || item.review_reasons.length);
+  if (filter === "claude" || filter === "claude_edited") {
+    const d = state.decisions[item.task_id];
+    const byClaude = st === "approved" && d.reviewer === "claude";
+    return filter === "claude" ? byClaude : byClaude && d.edited;
+  }
+  return st === filter;
+}
+
+function rebuildList(keepTaskId) {
+  state.list = state.items.filter((it) => matches(it, state.filter));
+  const idx = state.list.findIndex((it) => it.task_id === keepTaskId);
+  state.index = idx >= 0 ? idx : Math.min(state.index, Math.max(state.list.length - 1, 0));
+}
+
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(() => t.classList.remove("show"), 1600);
+}
+
+function renderHeader() {
+  const total = state.items.length;
+  const approved = state.items.filter((it) => statusOf(it) === "approved").length;
+  const problem = state.items.filter((it) => statusOf(it) === "problem").length;
+  $("counts").textContent = `${approved}/${total} onaylı · ${problem} sorunlu · ${total - approved - problem} bekleyen`;
+  $("bar").style.width = total ? `${(approved / total) * 100}%` : "0";
+  $("position").textContent = state.list.length ? `${state.index + 1} / ${state.list.length}` : "";
+
+  renderFileOptions();
+
+  // Her filtrenin yanında kaç satır içerdiği görünsün
+  for (const opt of $("filter").options) {
+    opt.dataset.label ??= opt.textContent;
+    const n = state.items.filter((it) => matches(it, opt.value)).length;
+    opt.textContent = `${opt.dataset.label} (${n})`;
+  }
+}
+
+let checkTimer = null;
+function scheduleCheck(item) {
+  clearTimeout(checkTimer);
+  checkTimer = setTimeout(async () => {
+    const res = await api("/api/check", { en: item.prompt_en, tr: currentText(item) });
+    if (res.ok) renderWarnings(item, (await res.json()).warnings);
+  }, 300);
+}
+
+function renderWarnings(item, warnings) {
+  const list = [
+    ...item.review_reasons.map((r) => `<li class="review">Geri çeviri kontrolü: ${esc(r)}</li>`),
+    ...warnings.map((w) => `<li>${esc(w)}</li>`),
+  ];
+  $("warnings").innerHTML = list.join("");
+}
+
+function render() {
+  renderHeader();
+  const view = $("view");
+  if (!state.list.length) {
+    const msg = state.filter === "pending" ? "Bekleyen satır kalmadı. 🎉" : "Bu filtrede satır yok.";
+    view.innerHTML = `<div class="card empty">${msg}</div>`;
+    return;
+  }
+  const item = state.list[state.index];
+  const st = statusOf(item);
+  const d = state.decisions[item.task_id];
+  const text = currentText(item);
+  const note = item.task_id in state.notes ? state.notes[item.task_id] : (d?.note || "");
+  const stale = d && d.draft_tr !== item.draft_tr;
+  const byClaude = d?.reviewer === "claude" ? " · Claude" : d?.reviewer === "human+claude" ? " · Claude düzeltti" : "";
+  const statusLabel = { pending: "Bekliyor", approved: d?.edited ? "Onaylı (düzeltildi)" : "Onaylı", problem: "Sorunlu" }[st] + byClaude;
+
+  const tests = [
+    item.test_imports.length ? item.test_imports.join("\n") : "",
+    item.test_setup_code || "",
+    item.test_list.join("\n"),
+  ].filter(Boolean).join("\n\n");
+
+  view.innerHTML = `
+    <div class="card">
+      <div class="row-head">
+        <strong>task_id ${item.task_id}</strong>
+        <span class="badge ${st}">${statusLabel}</span>
+      </div>
+
+      <div class="label">İngilizce</div>
+      <div class="en">${esc(item.prompt_en)}</div>
+
+      <div class="label"><label for="tr">Türkçe</label></div>
+      <textarea id="tr" spellcheck="true" lang="tr">${esc(text)}</textarea>
+      <div class="draft-diff" id="draftDiff"></div>
+      ${d?.reviewer?.includes("claude") && d.edited ? `<div class="draft-diff">DeepL taslağı: “${esc(item.draft_tr)}”</div>` : ""}
+      ${stale ? `<ul class="warnings"><li class="review">Taslak bu satır onaylandıktan sonra yeniden çevrilmiş. Yeni taslak: “${esc(item.draft_tr)}”</li></ul>` : ""}
+      <ul class="warnings" id="warnings"></ul>
+
+      ${item.back_translation ? `<div class="label">Geri çeviri</div><div class="back">${esc(item.back_translation)}</div>` : ""}
+
+      <details>
+        <summary>Kod ve testler (anlamı doğrulamak için)</summary>
+        <pre>${esc(item.code)}</pre>
+        <pre>${esc(tests)}</pre>
+      </details>
+
+      <div class="label"><label for="note">Not (isteğe bağlı)</label></div>
+      <input class="note" id="note" value="${esc(note)}" placeholder="ör. kaynakta yazım hatası var: woodball → Woodall">
+
+      <div class="actions">
+        <button class="btn" id="prev">← Önceki</button>
+        <button class="btn" id="next">Sonraki →</button>
+        <span class="spacer"></span>
+        ${st !== "pending" ? `<button class="btn" id="reset">Kararı geri al</button>` : ""}
+        <button class="btn danger" id="problem">Sorunlu<kbd>Alt+S</kbd></button>
+        <button class="btn primary" id="approve">Onayla<kbd>Ctrl+Enter</kbd></button>
+      </div>
+    </div>`;
+
+  const ta = $("tr");
+  const updateDiff = () => {
+    const changed = ta.value.trim() !== item.draft_tr;
+    $("draftDiff").innerHTML = changed
+      ? `Taslaktan farklı. <button id="restore">Taslağa dön</button>`
+      : "";
+    const restore = $("restore");
+    if (restore) restore.onclick = () => {
+      state.edits[item.task_id] = item.draft_tr;
+      ta.value = item.draft_tr;
+      updateDiff();
+      scheduleCheck(item);
+    };
+  };
+  ta.addEventListener("input", () => {
+    state.edits[item.task_id] = ta.value;
+    updateDiff();
+    scheduleCheck(item);
+  });
+  $("note").addEventListener("input", (e) => { state.notes[item.task_id] = e.target.value; });
+  $("prev").onclick = () => move(-1);
+  $("next").onclick = () => move(1);
+  $("approve").onclick = () => decide("approved");
+  $("problem").onclick = () => decide("problem");
+  if ($("reset")) $("reset").onclick = () => decide("pending");
+
+  updateDiff();
+  renderWarnings(item, item.warnings);
+  if (item.task_id in state.edits || d) scheduleCheck(item);
+  ta.focus();
+  ta.setSelectionRange(ta.value.length, ta.value.length);
+}
+
+function move(delta) {
+  if (!state.list.length) return;
+  state.index = Math.max(0, Math.min(state.list.length - 1, state.index + delta));
+  render();
+}
+
+async function decide(status) {
+  const item = state.list[state.index];
+  if (!item) return;
+  const finalTr = currentText(item).trim();
+  const note = item.task_id in state.notes ? state.notes[item.task_id] : (state.decisions[item.task_id]?.note || "");
+  if (status === "approved" && !finalTr) { toast("Boş çeviri onaylanamaz"); return; }
+  if (status === "problem" && !note.trim()) {
+    $("note").focus();
+    toast("Sorunlu işaretlemek için kısa bir not yazın");
+    return;
+  }
+
+  const res = await api("/api/decision", {
+    file: state.file, task_id: item.task_id, status, final_tr: finalTr, note,
+    // Sunucu, satır bu sayfa yüklendikten sonra başka yerden değiştirildiyse kaydı reddeder
+    expected_updated_at: state.decisions[item.task_id]?.updated_at ?? null,
+  });
+  if (res.status === 409) {
+    toast("Bu satır başka bir yerden değiştirilmiş; güncel hali yüklendi, kontrol edip tekrar deneyin");
+    delete state.edits[item.task_id];
+    delete state.notes[item.task_id];
+    await loadFile(state.file, item.task_id);
+    return;
+  }
+  if (!res.ok) { toast("Kaydedilemedi: " + (await res.text())); return; }
+
+  const { decision } = await res.json();
+  if (decision) state.decisions[item.task_id] = decision; else delete state.decisions[item.task_id];
+  delete state.edits[item.task_id];
+  delete state.notes[item.task_id];
+  toast({ approved: "Onaylandı", problem: "Sorunlu olarak işaretlendi", pending: "Karar geri alındı" }[status]);
+
+  // Filtreden düşen satır listeden çıkar; aynı index bir sonraki satırı gösterir
+  const wasIndex = state.index;
+  const stillMatches = matches(item, state.filter);
+  rebuildList(null);
+  state.index = stillMatches ? Math.min(wasIndex + 1, state.list.length - 1) : Math.min(wasIndex, state.list.length - 1);
+  state.index = Math.max(state.index, 0);
+  render();
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key === "Enter") { e.preventDefault(); decide("approved"); }
+  else if (e.altKey && e.key === "ArrowLeft") { e.preventDefault(); move(-1); }
+  else if (e.altKey && e.key === "ArrowRight") { e.preventDefault(); move(1); }
+  else if (e.altKey && (e.key === "s" || e.key === "S")) { e.preventDefault(); decide("problem"); }
+});
+
+window.addEventListener("beforeunload", (e) => {
+  if (hasUnsavedEdits()) { e.preventDefault(); e.returnValue = ""; }
+});
+
+$("filter").addEventListener("change", (e) => {
+  const current = state.list[state.index]?.task_id;
+  state.filter = e.target.value;
+  store("mbpp-tr-filter", state.filter);
+  rebuildList(current);
+  render();
+});
+
+function renderFileOptions() {
+  const select = $("fileSelect");
+  select.innerHTML = state.files.map((f) => {
+    // Açık dosyanın sayıları sunucudan değil, güncel yerel durumdan hesaplanır
+    const approved = f.name === state.file
+      ? state.items.filter((it) => statusOf(it) === "approved").length
+      : f.approved;
+    return `<option value="${esc(f.name)}">${esc(f.name)} (${approved}/${f.total})</option>`;
+  }).join("");
+  select.value = state.file;
+}
+
+async function loadFile(name, keepTaskId) {
+  const res = await api(`/api/data?file=${encodeURIComponent(name)}`);
+  if (!res.ok) { toast("Dosya yüklenemedi: " + (await res.text())); return false; }
+  const data = await res.json();
+  state.file = data.file;
+  state.items = data.items;
+  state.decisions = data.decisions;
+  store("mbpp-tr-file", state.file);
+  rebuildList(keepTaskId ?? null);
+  render();
+  return true;
+}
+
+$("fileSelect").addEventListener("change", async (e) => {
+  if (hasUnsavedEdits() && !confirm("Kaydedilmemiş düzeltmeler var. Dosya değiştirilirse kaybolacak. Devam edilsin mi?")) {
+    e.target.value = state.file;
+    return;
+  }
+  state.edits = {};
+  state.notes = {};
+  state.index = 0;
+  const filesRes = await api("/api/files");
+  if (filesRes.ok) state.files = (await filesRes.json()).files;
+  await loadFile(e.target.value);
+});
+
+// Sekmeye geri dönüldüğünde, başka bir yerden yapılmış kararları görmek için yenile
+document.addEventListener("visibilitychange", async () => {
+  if (document.visibilityState !== "visible" || !state.file || hasUnsavedEdits()) return;
+  const current = state.list[state.index]?.task_id;
+  await loadFile(state.file, current);
+});
+
+(async function init() {
+  state.filter = recall("mbpp-tr-filter") || "pending";
+  $("filter").value = state.filter;
+
+  const res = await api("/api/files");
+  if (!res.ok) {
+    $("view").innerHTML = `<div class="card empty">${res.status === 403
+      ? "Erişim reddedildi. Adresi, size verilen token ile birlikte eksiksiz açın."
+      : "Sunucuya bağlanılamadı."}</div>`;
+    return;
+  }
+  state.files = (await res.json()).files;
+  const remembered = recall("mbpp-tr-file");
+  const first = state.files.some((f) => f.name === remembered) ? remembered : state.files[0].name;
+  state.file = first;
+  await loadFile(first);
+})();
+</script>
+</body>
+</html>
